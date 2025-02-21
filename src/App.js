@@ -1,11 +1,11 @@
-import Navbar from '../src/components/NavBar/navbar';
-import Intro from '../src/components/Intro/intro';
+import Toolbar from './components/Toolbar/toolbar';
+import HomePage from './components/HomePage/home_page';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Intro/>
+      <Toolbar/>
+      <HomePage/>
     </div>
   );
 }

@@ -1,13 +1,13 @@
 import React from 'react'
-import './navbar.css';
+import './toolbar.css';
 import { Link } from 'react-scroll';
-import logo from '../../assets/logo.png'
-import send from '../../assets/send.png'
-import moon from '../../assets/moon.png'
+import logo from '../../assets/images/logo.png'
+import send from '../../assets/images/send.png'
+import moon from '../../assets/images/moon.png'
 
-const navbar = () => {
+const toolbar = () => {
   return (
-   <nav className='navbar'>
+   <nav className='toolbar'>
     <img src={logo} alt='Logo' className='logo' />
     <div className='tabs'>
       <Link className='tabItem'>Home</Link>
@@ -22,4 +22,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default toolbar
