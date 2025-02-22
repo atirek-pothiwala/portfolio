@@ -1,5 +1,5 @@
 import React from "react";
-import "./intro_gamer.css";
+import "./gamer_view.css";
 import imgDiscord from "../../assets/images/discord.png";
 
 const IntroGamer = ({ opacity }) => {

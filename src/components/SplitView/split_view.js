@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "../SplitView/split_view.css";
 import lookLeft from "../../assets/images/demon.png";
 import lookRight from "../../assets/images/love.png";
-import IntroDev from "../IntroDeveloper/intro_dev";
-import IntroGamer from "../IntroGamer/intro_gamer";
+import DevView from "../DevView/dev_view";
+import GamerView from "../GamerView/gamer_view";
 
 const SplitView = () => {
   const [clipPercent, setClipPercent] = useState(50);
@@ -42,7 +42,7 @@ const SplitView = () => {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      <IntroGamer opacity={fadeLeft} />
+      <GamerView opacity={fadeLeft} />
       <div className="image-container">
         <img
           src={lookLeft}
@@ -63,7 +63,7 @@ const SplitView = () => {
           alt="Right Side"
         />
       </div>
-      <IntroDev opacity={fadeRight} />
+      <DevView opacity={fadeRight} />
     </section>
   );
 };

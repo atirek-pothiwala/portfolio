@@ -3,17 +3,16 @@ import "./toolbar.css";
 import { Link } from "react-scroll";
 import logo from "../../assets/images/logo.png";
 import download from "../../assets/images/cloud.png";
-import resume from "../../assets/docs/atirek-pothiwala-resume.pdf";
 
 const toolbar = () => {
-  function downloadResume() {
+  const downloadResume = async () => {
     const link = document.createElement("a");
-    link.href = { resume };
+    link.href = "./atirek-pothiwala-resume.pdf";
     link.download = "atirek-pothiwala-resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  }
+  };
 
   return (
     <nav className="toolbar">

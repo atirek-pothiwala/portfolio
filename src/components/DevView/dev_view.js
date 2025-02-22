@@ -1,5 +1,5 @@
 import React from "react";
-import "./intro_dev.css";
+import "./dev_view.css";
 import suitcase from "../../assets/images/briefcase.png";
 
 const IntroDev = ({ opacity }) => {
