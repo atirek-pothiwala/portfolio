@@ -1,4 +1,4 @@
-#intro-gamer {
+#gamer-view {
   height: calc(100vh - 5rem);
   width: 25%;
   overflow: hidden;
@@ -6,7 +6,7 @@
   transition: opacity 500ms ease-in-out;
 }
 
-.intro-gamer-content {
+.gamer-view-content {
   height: 100vh;
   width: auto;
   display: inline-flex;
@@ -15,20 +15,20 @@
   justify-content: center;
 }
 
-.intro-gamer-title {
+.gamer-view-title {
   text-align: end;
   font-size: 3rem;
   font-weight: bold;
 }
 
-.intro-gamer-title span {
+.gamer-view-title span {
   font-family: "Shojumaru", sans-serif;
 }
 
-.intro-gamer-para {
+.gamer-view-para {
   font-size: medium;
   font-weight: 300;
   text-align: end;
   letter-spacing: 1px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }

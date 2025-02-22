@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
-import "./music_view.css";
+import "./audio_button.css";
 import imgPlay from "../../assets/images/play.png";
 import imgPause from "../../assets/images/pause.png";
 import music from "../../assets/media/music.mp3";
 import { useState } from "react";
 
-const MusicView = () => {
+const AudioButton = () => {
   const [audioStatus, setAudioStatus] = useState(false);
   const audioRef = useRef();
 
@@ -20,21 +20,16 @@ const MusicView = () => {
   };
 
   return (
-    <button
-      className="btn-music"
-      onClick={audioStatus ? pauseAudio : playAudio}
-    >
-      <audio
-        id="player"
-        src={music}
-        ref={audioRef}
-        loop
-        autoPlay
-        type="audio/mpeg"
+    <div>
+      <audio id="player" src={music} ref={audioRef} loop type="audio/mpeg" />
+      <img
+        className="audio-button"
+        onClick={audioStatus ? pauseAudio : playAudio}
+        src={audioStatus ? imgPause : imgPlay}
+        alt="Play/Stop Music"
       />
-      <img src={audioStatus ? imgPause : imgPlay} alt="Play/Stop Music" />
-    </button>
+    </div>
   );
 };
 
-export default MusicView;
+export default AudioButton;

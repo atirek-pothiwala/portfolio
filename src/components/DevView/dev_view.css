@@ -1,4 +1,4 @@
-#intro-dev {
+#dev-view {
   height: calc(100vh - 5rem);
   width: 25%;
   overflow: hidden;
@@ -6,7 +6,7 @@
   transition: opacity 500ms linear;
 }
 
-.intro-dev-content {
+.dev-view-content {
   height: 100vh;
   width: auto;
   font-size: 2.5rem;
@@ -17,20 +17,20 @@
   justify-content: center;
 }
 
-.intro-dev-title {
+.dev-view-title {
   text-align: end;
   font-size: 3rem;
   font-weight: bold;
 }
 
-.intro-dev-title span {
+.dev-view-title span {
   font-family: "Shojumaru", sans-serif;
 }
 
-.intro-dev-para {
+.dev-view-para {
   font-size: medium;
   font-weight: 300;
   text-align: start;
   letter-spacing: 1px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }

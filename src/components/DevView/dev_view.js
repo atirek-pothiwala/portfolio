@@ -1,27 +1,37 @@
 import React from "react";
 import "./dev_view.css";
-import suitcase from "../../assets/images/briefcase.png";
+import ImageButton from "../ImageButton/image_button";
+import imgLinkedin from "../../assets/images/linkedin.png";
+import imgGithub from "../../assets/images/github.png";
 
-const IntroDev = ({ opacity }) => {
+const DevView = ({ opacity }) => {
   return (
-    <section id="intro-dev" style={{ opacity }}>
-      <div className="intro-dev-content">
-        <span className="intro-dev-title">
+    <section id="dev-view" style={{ opacity }}>
+      <div className="dev-view-content">
+        <span className="dev-view-title">
           🚀&lt;
           <span>Coder</span>
           &gt;💻
         </span>
-        <p className="intro-dev-para">
+        <p className="dev-view-para">
           Expertised in building high-performance, user-friendly apps ensuring
           clean and efficiet code.
         </p>
-        <button className="btnNormal">
-          <img src={suitcase} alt="Hire Me" />
-          Hire Me
-        </button>
+        <div>
+          <ImageButton
+            src={imgLinkedin}
+            alt="LinkedIn"
+            url="https://www.linkedin.com/in/atirekpothiwala"
+          />
+          <ImageButton
+            src={imgGithub}
+            alt="Github"
+            url="https://github.com/atirek-pothiwala"
+          />
+        </div>
       </div>
     </section>
   );
 };
 
-export default IntroDev;
+export default DevView;
