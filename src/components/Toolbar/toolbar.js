@@ -1,25 +1,37 @@
-import React from 'react'
-import './toolbar.css';
-import { Link } from 'react-scroll';
-import logo from '../../assets/images/logo.png'
-import send from '../../assets/images/send.png'
-import moon from '../../assets/images/moon.png'
+import React from "react";
+import "./toolbar.css";
+import { Link } from "react-scroll";
+import logo from "../../assets/images/logo.png";
+import download from "../../assets/images/cloud.png";
+import resume from "../../assets/docs/atirek-pothiwala-resume.pdf";
 
 const toolbar = () => {
-  return (
-   <nav className='toolbar'>
-    <img src={logo} alt='Logo' className='logo' />
-    <div className='tabs'>
-      <Link className='tabItem'>Home</Link>
-      <Link className='tabItem'>About</Link>
-      <Link className='tabItem'>Portfolio</Link>
-    </div>
-    <div className='tabs'>
-    <button className='btnNormal'><img src={send} alt='Contact Me'/>Contact Me</button>
-    <button className='btnAppearance'><img src={moon} alt='Mode'/></button>
-    </div>
-   </nav>
-  )
-}
+  function downloadResume() {
+    const link = document.createElement("a");
+    link.href = { resume };
+    link.download = "atirek-pothiwala-resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 
-export default toolbar
+  return (
+    <nav className="toolbar">
+      <img src={logo} alt="Logo" className="logo" />
+      <div className="tabs">
+        <Link className="tabItem">Home</Link>
+        <Link className="tabItem">About</Link>
+        <Link className="tabItem">Portfolio</Link>
+      </div>
+      <button className="btnNormal" onClick={downloadResume}>
+        <img src={download} alt="Download" />
+        Resume
+      </button>
+      {/* <button className="btnAppearance">
+        <img src={moon} alt="Mode" />
+      </button> */}
+    </nav>
+  );
+};
+
+export default toolbar;

@@ -1,58 +1,59 @@
 .toolbar {
-    height: 5rem;
-    width: 100vw;
-    max-width: 75rem;
-    margin: 1rem auto;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 3;
+  width: 100vw;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: rgb(0, 0, 0, 0.25);
 }
 
 .logo {
-    object-fit: cover;
-    height: 5rem;
-    width: 5rem;
+  object-fit: cover;
+  height: 5rem;
+  width: 5rem;
 }
 
 .tabs {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  background: rgb(255, 255, 255, 0.01);
+  padding: 0 1rem;
+  border-radius: 1rem;
 }
 
 .tabItem {
-    margin: 1rem;
-    cursor: pointer;
+  margin: 1rem;
+  cursor: pointer;
 }
 
 .tabItem:hover {
-    color: #4BFF00;
-    /* padding-bottom: 0.25rem;
+  color: #4bff00;
+  /* padding-bottom: 0.25rem;
     border-bottom: 3px solid yellowgreen;
     border-bottom-left-radius: 0.5rem; */
- }
+}
 
- .btnAppearance {
-    height: 3rem;
-    width: 3rem;
-    margin-left: 1rem;
-    border: none;
-    background: white;
-    color: black;
-    border-radius: 1rem;
-    align-items: center;
+.btnAppearance {
+  height: 3rem;
+  width: 3rem;
+  margin-left: 1rem;
+  border: none;
+  background: white;
+  color: black;
+  border-radius: 0.5rem;
+  align-items: center;
 }
 
 .btnAppearance:hover {
-    background: #4BFF00;
+  background: #4bff00;
 }
 
-.btnAppearance img {    
-    object-fit: cover;
-    height: 1.25rem;
-    width: 1.25rem;
-    margin-top: 0.4rem;
+.btnAppearance img {
+  object-fit: cover;
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-top: 0.4rem;
 }

@@ -1,0 +1,34 @@
+#intro-gamer {
+  height: calc(100vh - 5rem);
+  width: 25%;
+  overflow: hidden;
+  margin-bottom: 10%;
+  transition: opacity 500ms ease-in-out;
+}
+
+.intro-gamer-content {
+  height: 100vh;
+  width: auto;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.intro-gamer-title {
+  text-align: end;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.intro-gamer-title span {
+  font-family: "Shojumaru", sans-serif;
+}
+
+.intro-gamer-para {
+  font-size: medium;
+  font-weight: 300;
+  text-align: end;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}

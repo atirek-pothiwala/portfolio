@@ -1,0 +1,36 @@
+#intro-dev {
+  height: calc(100vh - 5rem);
+  width: 25%;
+  overflow: hidden;
+  margin-bottom: 10%;
+  transition: opacity 500ms linear;
+}
+
+.intro-dev-content {
+  height: 100vh;
+  width: auto;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.intro-dev-title {
+  text-align: end;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.intro-dev-title span {
+  font-family: "Shojumaru", sans-serif;
+}
+
+.intro-dev-para {
+  font-size: medium;
+  font-weight: 300;
+  text-align: start;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import './home_page.css'
 import { Link } from 'react-scroll';
 import suitcase from '../../assets/images/suitcase.png'
