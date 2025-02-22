@@ -10,7 +10,7 @@ const DevView = ({ opacity }) => {
       <div className="dev-view-content">
         <span className="dev-view-title">
           &lt;
-          <span>Coder</span>
+          <span>Coder/</span>
           &gt;
         </span>
         <p className="dev-view-para">

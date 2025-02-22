@@ -10,7 +10,7 @@ const GamerView = ({ opacity }) => {
     <section id="gamer-view" style={{ opacity }}>
       <div className="gamer-view-content">
         <span className="gamer-view-title">
-          <span>Gamer</span>
+          🐱‍👤<span>Gamer</span>⚔️
         </span>
         <p className="gamer-view-para">
           Passionate and specializing in solo gameplay, RPG, and immersive
