@@ -1,5 +1,5 @@
 #splitView {
-  height: calc(100vh - 10rem);
+  height: 90vh;
   width: 100vw;
   position: relative;
   display: flex;
@@ -15,16 +15,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px;
-  height: 600px;
+  width: 30vw;
+  height: 30vw;
 }
 
 .image {
   position: absolute;
   width: 80%;
   height: 80%;
-  top: -20;
-  left: -20;
   object-fit: cover;
   transition: clip-path 500ms linear, transform linear;
 }

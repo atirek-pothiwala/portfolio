@@ -9,14 +9,12 @@ const toolbar = () => {
     <nav className="toolbar">
       <img src={logo} alt="Logo" className="logo" />
       <div className="tabs">
-        <Link className="tabItem">Home</Link>
-        <Link className="tabItem">About</Link>
+        <Link className="selectedTabItem">Home</Link>
+        <Link className="tabItem">Experience</Link>
         <Link className="tabItem">Portfolio</Link>
+        <Link className="tabItem">Contact</Link>
       </div>
       <ResumeButton />
-      {/* <button className="btnAppearance">
-        <img src={moon} alt="Mode" />
-      </button> */}
     </nav>
   );
 };

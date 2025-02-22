@@ -9,8 +9,6 @@
 .dev-view-content {
   height: 100vh;
   width: auto;
-  font-size: 2.5rem;
-  font-weight: bold;
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
@@ -19,7 +17,7 @@
 
 .dev-view-title {
   text-align: end;
-  font-size: 3rem;
+  font-size: 2.5vw;
   font-weight: bold;
 }
 
@@ -28,9 +26,9 @@
 }
 
 .dev-view-para {
-  font-size: medium;
+  font-size: 1vw;
   font-weight: 300;
   text-align: start;
   letter-spacing: 1px;
-  margin-bottom: 1rem;
+  margin-bottom: 1vh;
 }

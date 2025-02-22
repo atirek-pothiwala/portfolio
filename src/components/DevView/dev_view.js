@@ -9,9 +9,9 @@ const DevView = ({ opacity }) => {
     <section id="dev-view" style={{ opacity }}>
       <div className="dev-view-content">
         <span className="dev-view-title">
-          🚀&lt;
+          &lt;
           <span>Coder</span>
-          &gt;💻
+          &gt;
         </span>
         <p className="dev-view-para">
           Expertised in building high-performance, user-friendly apps ensuring

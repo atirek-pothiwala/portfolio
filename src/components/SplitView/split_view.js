@@ -16,10 +16,8 @@ const SplitView = () => {
     const mouseX = event.clientX - left;
     const kConstant = mouseX / width;
     const percentage = 50 + (kConstant - 0.5) * 300;
-    const moveOffset = (kConstant - 0.5) * 100;
+    const moveOffset = (kConstant - 0.5) * 20;
 
-    // const percentage = kConstant * 100;
-    // const moveOffset = (kConstant - 0.5) * 60;
     const fadeLeftValue = Math.max(0, 1 - percentage / 100);
     const fadeRightValue = Math.max(0, percentage / 100);
 
@@ -49,7 +47,7 @@ const SplitView = () => {
           className="image left-half"
           style={{
             clipPath: `inset(0 ${clipPercent}% 0 0)`,
-            transform: `translateX(${-offset}px)`,
+            transform: `translateX(${-offset}%)`,
           }}
           alt="Left Side"
         />
@@ -58,7 +56,7 @@ const SplitView = () => {
           className="image right-half"
           style={{
             clipPath: `inset(0 0 0 ${100 - clipPercent}%)`,
-            transform: `translateX(${-offset}px)`,
+            transform: `translateX(${-offset}%)`,
           }}
           alt="Right Side"
         />
