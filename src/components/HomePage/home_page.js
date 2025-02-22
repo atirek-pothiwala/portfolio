@@ -1,8 +1,8 @@
 import React from "react";
 import "./home_page.css";
 import { Link } from "react-scroll";
-import imgSuitcase from "../../assets/images/suitcase.png";
-import imgLogo from "../../assets/images/logo.png";
+import imgSuitcase from "../../assets/images/briefcase.png";
+//import imgLogo from "../../assets/images/logo.png";
 
 const HomePage = () => {
   return (
@@ -27,7 +27,7 @@ const HomePage = () => {
           </button>
         </Link>
       </div>
-      <img src={imgLogo} alt="Logo" className="bg" />
+      {/* <img src={imgLogo} alt="Logo" className="home-page-bg" /> */}
     </section>
   );
 };

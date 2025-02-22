@@ -1,6 +1,7 @@
 .audio-button {
-  position: absolute;
+  position: fixed;
   background: transparent;
+  overflow: hidden;
   height: 3vw;
   width: 3vw;
   object-fit: cover;
