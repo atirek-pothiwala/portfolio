@@ -1,28 +1,28 @@
-#dev-view {
+#coder-view {
   height: auto;
   width: 25vw;
   overflow: hidden;
   transition: opacity 500ms linear;
 }
 
-.dev-view-content {
+.coder-view-content {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
 
-.dev-view-title {
+.coder-view-title {
   text-align: end;
   font-size: 2.5vw;
   font-weight: bold;
 }
 
-.dev-view-title span {
+.coder-view-title span {
   font-family: "Shojumaru", sans-serif;
 }
 
-.dev-view-para {
+.coder-view-para {
   font-size: 1vw;
   font-weight: 300;
   text-align: start;

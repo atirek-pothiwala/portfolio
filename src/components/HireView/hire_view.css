@@ -1,0 +1,66 @@
+#hire-view {
+  height: auto;
+  max-width: 80vw;
+  background: rgb(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+  overflow: hidden;
+}
+
+.hire-view-profile {
+  height: 15vw;
+  width: 15vw;
+  margin-right: 2vw;
+  border-radius: 7.5vw;
+  border: 5px solid white;
+}
+
+.hire-view-content {
+  display: flex;
+  flex-direction: row;
+  padding: 2.5%;
+  align-items: flex-start;
+}
+
+.hire-view-text-content {
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Reggae One", sans-serif;
+}
+
+.hire-view-hello {
+  font-weight: normal;
+  color: #4bff00;
+  font-family: "Reggae One", sans-serif;
+}
+
+.hire-view-title {
+  font-family: "Reggae One", sans-serif;
+}
+
+.hire-view-role {
+  font-family: "Reggae One", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.hire-view-para {
+  font-size: medium;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hire-view-line {
+  width: 60%;
+  height: 1px;
+  background: white;
+  margin: 0.5rem 0;
+}
