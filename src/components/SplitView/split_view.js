@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../SplitView/split_view.css";
 import lookLeft from "../../assets/images/demon.png";
 import lookRight from "../../assets/images/wink.png";
-import DevView from "../CoderView/coder_view";
+import CoderView from "../CoderView/coder_view";
 import GamerView from "../GamerView/gamer_view";
 
 const SplitView = () => {
