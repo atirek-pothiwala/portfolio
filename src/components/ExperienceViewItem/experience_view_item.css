@@ -15,15 +15,15 @@
 #experience-view-item img {
   width: 2.5rem;
   height: 2.5rem;
-  margin-left: 3rem;
+  margin-left: auto;
   padding: 0.8rem;
   background: white;
-  border-radius: 0.7rem;
+  border-radius: 1rem;
 }
 
 #experience-view-item:hover img {
   background: black;
-  box-shadow: 1px 1px 10px 2.5px white;
+  box-shadow: 1px 1px 10px 2.5px #4bff00;
 }
 
 .experience-view-item-title {

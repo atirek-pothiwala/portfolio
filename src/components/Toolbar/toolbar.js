@@ -16,9 +16,6 @@ const toolbar = () => {
       behavior: "smooth",
     });
   };
-  const sendMail = () => {
-    return "mailto:atirekpothiwala@gmail.com?subject=Let%27s%20Talk&body=Hi%20Atirek";
-  };
 
   return (
     <nav className="toolbar">
@@ -33,9 +30,12 @@ const toolbar = () => {
         >
           Experience
         </div>
-        <a className="tabItem" href={sendMail}>
+        <div
+          className="tabItem"
+          onClick={() => scrollToSection("contact-view")}
+        >
           Contact
-        </a>
+        </div>
       </div>
       <ResumeButton />
     </nav>

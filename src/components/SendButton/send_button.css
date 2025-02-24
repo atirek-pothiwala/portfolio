@@ -1,41 +1,29 @@
-.resume-button {
+.send-button {
   height: 3rem;
   background: white;
   color: black;
   border: none;
+  margin-left: auto;
+  margin-right: 0%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0 1.5rem;
   border-radius: 0.5rem;
   font-weight: 600;
+  font-size: medium;
   text-transform: capitalize;
 }
 
-.resume-button div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.resume-button:hover {
+.send-button:hover {
   background: black;
   color: white;
   box-shadow: 1px 1px 10px 2.5px #4bff00;
 }
 
-.resume-button img {
+.send-button img {
   object-fit: cover;
   height: 2rem;
   width: 2rem;
   margin-right: 0.5rem;
-}
-
-.resume-button-title {
-  font-size: 0.6rem;
-}
-
-.resume-button-subtitle {
-  font-size: 1rem;
-  margin-top: -0.25rem;
 }

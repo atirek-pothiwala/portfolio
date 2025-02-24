@@ -16,7 +16,7 @@
 .contact-button:hover {
   background: black;
   color: white;
-  box-shadow: 1px 1px 10px 2.5px white;
+  box-shadow: 1px 1px 10px 2.5px #4bff00;
 }
 
 .contact-button img {

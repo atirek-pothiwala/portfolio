@@ -5,6 +5,7 @@ import ProfileView from "./components/ProfileView/profile_view";
 import ExperienceView from "./components/ExperienceView/experience_view";
 import FooterView from "./components/FooterView/footer_view";
 import "./App.css";
+import ContactView from "./components/ContactView/contact_view";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <ProfileView />
         <ExperienceView />
       </div>
+      <ContactView />
       <FooterView />
       <AudioButton />
     </section>

@@ -1,6 +1,5 @@
 import React from "react";
 import "./profile_view.css";
-import imgEmail from "../../assets/images/email.png";
 import imgProfile from "../../assets/images/profile.jpg";
 import ContactButton from "../ContactButton/contact_button";
 
@@ -14,7 +13,7 @@ const ProfileView = () => {
         <br />
         Vadodara, Gujarat, India
       </p>
-      <ContactButton src={imgEmail} alt="Let's Talk" text="Let's Talk" />
+      <ContactButton />
     </section>
   );
 };

@@ -1,15 +1,28 @@
 import React from "react";
 import "./contact_button.css";
+import imgEmail from "../../assets/images/email.png";
 
-const ContactButton = ({ src, alt, text }) => {
-  const sendMail = () => {
-    return "mailto:atirekpothiwala@gmail.com?subject=Let%27s%20Talk&body=Hi%20Atirek";
+const ContactButton = () => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element == null) {
+      return;
+    }
+    const elementPosition =
+      element.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top: elementPosition - 160,
+      behavior: "smooth",
+    });
   };
   return (
-    <a className="contact-button" href={sendMail}>
-      <img src={src} alt={alt} />
-      {text}
-    </a>
+    <div
+      className="contact-button"
+      onClick={() => scrollToSection("contact-view")}
+    >
+      <img src={imgEmail} alt="Let's Talk" />
+      Let's Talk
+    </div>
   );
 };
 

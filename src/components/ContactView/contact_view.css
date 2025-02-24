@@ -1,0 +1,59 @@
+#contact-view {
+  height: auto;
+  max-width: 80vw;
+  margin-left: auto;
+  padding-left: 26rem;
+  margin-right: auto;
+  margin-bottom: 10%;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  #contact-view {
+    padding-left: 0;
+  }
+}
+
+.contact-view-title {
+  font-family: "Reggae One", sans-serif;
+  font-size: 3.5rem;
+}
+
+.contact-view-title-highlight {
+  font-family: "Reggae One", sans-serif;
+  font-size: 3.5rem;
+  color: #4bff00;
+  text-shadow: 1px 1px 10px #4bff00;
+  display: inline-block;
+}
+
+.contact-view-content {
+  background: rgb(0, 0, 0, 0.25);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: white;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  color: white;
+  padding: 1.2rem;
+  margin-top: 1rem;
+  background: rgb(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  resize: vertical;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 1px 1px 10px 2.5px #4bff00;
+}
