@@ -1,5 +1,5 @@
 .toolbar {
-  width: 100%;
+  width: 100vw;
   padding: 2vh 2vw;
   display: flex;
   align-items: center;
