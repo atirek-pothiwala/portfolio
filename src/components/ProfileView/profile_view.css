@@ -1,0 +1,63 @@
+#profile-view {
+  height: min-content;
+  width: 22rem;
+  min-width: 22rem;
+  max-width: 22rem;
+  background: rgb(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 3rem 0.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  font-weight: normal;
+  color: white;
+  margin-right: 4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  #profile-view {
+    margin-right: 0;
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+    margin-bottom: 20%;
+  }
+}
+
+.profile-view-profile {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 7.5rem;
+  margin-bottom: 1rem;
+  border: 5px solid white;
+}
+
+.profile-view-title {
+  font-size: 2rem;
+  font-family: "Reggae One", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.profile-view-para {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 6rem;
+  color: rgb(255, 255, 255, 0.75);
+}
+
+.profile-view-experience {
+  font-family: "Reggae One", sans-serif;
+  font-size: 2.5rem;
+}
+
+.profile-view-experience-highlight {
+  font-family: "Reggae One", sans-serif;
+  font-size: 2.5rem;
+  color: #4bff00;
+}

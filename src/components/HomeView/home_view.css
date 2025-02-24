@@ -1,4 +1,4 @@
-#splitView {
+#home-view {
   height: 45vw;
   width: 100vw;
   position: relative;
@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-.image-container {
+.home-view-content {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -19,7 +19,7 @@
   height: 30vw;
 }
 
-.image {
+.home-view-content img {
   position: absolute;
   width: 80%;
   height: 80%;

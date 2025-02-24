@@ -1,16 +1,21 @@
 import Toolbar from "./components/Toolbar/toolbar";
-import SplitView from "./components/SplitView/split_view";
+import HomeView from "./components/HomeView/home_view";
 import AudioButton from "./components/AudioButton/audio_button";
-import HireView from "./components/HireView/hire_view";
+import ProfileView from "./components/ProfileView/profile_view";
+import ExperienceView from "./components/ExperienceView/experience_view";
+import "./App.css";
 
 function App() {
   return (
-    <div className="app">
+    <section>
       <Toolbar />
-      <SplitView />
-      <HireView />
+      <HomeView />
+      <div className="app-profile">
+        <ProfileView />
+        <ExperienceView />
+      </div>
       <AudioButton />
-    </div>
+    </section>
   );
 }
 

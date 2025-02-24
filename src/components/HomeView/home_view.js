@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "../SplitView/split_view.css";
+import "./home_view.css";
 import lookLeft from "../../assets/images/demon.png";
 import lookRight from "../../assets/images/wink.png";
 import CoderView from "../CoderView/coder_view";
 import GamerView from "../GamerView/gamer_view";
 
-const SplitView = () => {
+const HomeView = () => {
   const [clipPercent, setClipPercent] = useState(50);
   const [offset, setOffset] = useState(0);
   const [fadeLeft, setFadeLeft] = useState(1);
@@ -36,15 +36,14 @@ const SplitView = () => {
 
   return (
     <section
-      id="splitView"
+      id="home-view"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       <GamerView opacity={fadeLeft} />
-      <div className="image-container">
+      <div className="home-view-content">
         <img
           src={lookLeft}
-          className="image left-half"
           style={{
             clipPath: `inset(0 ${clipPercent}% 0 0)`,
             transform: `translateX(${-offset}%)`,
@@ -53,7 +52,6 @@ const SplitView = () => {
         />
         <img
           src={lookRight}
-          className="image right-half"
           style={{
             clipPath: `inset(0 0 0 ${100 - clipPercent}%)`,
             transform: `translateX(${-offset}%)`,
@@ -66,4 +64,4 @@ const SplitView = () => {
   );
 };
 
-export default SplitView;
+export default HomeView;
