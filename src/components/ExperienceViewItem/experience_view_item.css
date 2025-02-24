@@ -1,0 +1,42 @@
+#experience-view-item {
+  background: rgb(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#experience-view-item:hover {
+  background: rgb(255, 255, 255, 0.1);
+}
+
+#experience-view-item img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 3rem;
+  padding: 0.8rem;
+  background: white;
+  border-radius: 0.7rem;
+}
+
+#experience-view-item:hover img {
+  background: black;
+  box-shadow: 1px 1px 10px 2.5px white;
+}
+
+.experience-view-item-title {
+  font-size: 2rem;
+}
+
+.experience-view-item-subtitle {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255, 0.75);
+}
+
+.experience-view-item-years {
+  font-size: 0.9rem;
+  color: rgb(255, 255, 255, 0.75);
+}

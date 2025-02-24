@@ -1,0 +1,16 @@
+.app-profile {
+  height: auto;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+}
+
+@media screen and (max-width: 1024px) {
+  .app-profile {
+    flex-direction: column;
+  }
+}

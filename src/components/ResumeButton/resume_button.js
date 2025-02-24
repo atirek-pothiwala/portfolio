@@ -15,7 +15,10 @@ const ResumeButton = () => {
   return (
     <button className="resume-button" onClick={download}>
       <img src={imgDownload} alt="Download" />
-      Resume
+      <div>
+        <span className="resume-button-title">Download</span>
+        <span className="resume-button-subtitle">Resume</span>
+      </div>
     </button>
   );
 };
