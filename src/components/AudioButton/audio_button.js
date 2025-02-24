@@ -20,10 +20,9 @@ const AudioButton = () => {
   };
 
   return (
-    <div>
+    <div id="audio-button">
       <audio id="player" src={music} ref={audioRef} loop type="audio/mpeg" />
       <img
-        className="audio-button"
         onClick={audioStatus ? pauseAudio : playAudio}
         src={audioStatus ? imgPause : imgPlay}
         alt="Play/Stop Music"

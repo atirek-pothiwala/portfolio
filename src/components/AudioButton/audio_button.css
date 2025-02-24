@@ -1,17 +1,18 @@
-.audio-button {
+#audio-button img {
   position: fixed;
   background: transparent;
   overflow: hidden;
-  height: 3vw;
-  width: 3vw;
+  height: 3.5rem;
+  width: 3.5rem;
   object-fit: cover;
   border: none;
-  border-radius: 1.5vw;
-  right: 2vw;
-  bottom: 2vw;
+  border-radius: 1.75rem;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 4;
 }
 
-.audio-button:hover {
+#audio-button img:hover {
   background: white;
   box-shadow: 1px 1px 10px 2.5px white;
 }

@@ -1,5 +1,5 @@
 .toolbar {
-  width: 100vw;
+  width: 100%;
   padding: 2vh 2vw;
   display: flex;
   align-items: center;
@@ -13,21 +13,21 @@
 .logo {
   object-fit: cover;
   height: auto;
-  width: 5vw;
+  width: 5rem;
 }
 
 .tabs {
   display: flex;
   align-items: center;
   background: rgb(255, 255, 255, 0.01);
-  padding: 0 1vw;
-  border-radius: 1vw;
+  padding: 1.5vh 0.5vw;
+  border-radius: 1vh;
 }
 
 .tabItem {
-  margin: 1vw;
+  margin: 0 1vw;
   cursor: pointer;
-  font-size: 1vw;
+  font-size: 1rem;
   color: #fff;
 }
 

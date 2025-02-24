@@ -1,0 +1,8 @@
+#footer-view {
+  width: 100vw;
+  padding: 2vh 2vw;
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+  background: rgb(0, 0, 0, 0.25);
+}

@@ -1,13 +1,13 @@
 .resume-button {
-  height: 3vw;
+  height: 3rem;
   background: white;
   color: black;
   border: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1vw;
-  border-radius: 0.5vw;
+  padding: 0 1.5rem;
+  border-radius: 0.5rem;
   font-weight: 600;
   text-transform: capitalize;
 }
@@ -26,16 +26,16 @@
 
 .resume-button img {
   object-fit: cover;
-  height: 1.8vw;
-  width: 1.8vw;
-  margin-right: 0.5vw;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.5rem;
 }
 
 .resume-button-title {
-  font-size: 0.5vw;
+  font-size: 0.5rem;
 }
 
 .resume-button-subtitle {
-  font-size: 1vw;
-  margin-top: -0.5vh;
+  font-size: 1rem;
+  margin-top: -0.3rem;
 }
