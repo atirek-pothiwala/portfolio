@@ -3,8 +3,8 @@ import HomeView from "./components/HomeView/home_view";
 import AudioButton from "./components/AudioButton/audio_button";
 import ProfileView from "./components/ProfileView/profile_view";
 import ExperienceView from "./components/ExperienceView/experience_view";
-import "./App.css";
 import FooterView from "./components/FooterView/footer_view";
+import "./App.css";
 
 function App() {
   return (
