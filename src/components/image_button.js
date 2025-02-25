@@ -1,5 +1,4 @@
 import React from "react";
-import "./image_button.css";
 
 const ImageButton = ({ src, alt, url }) => {
   const openLink = async () => {

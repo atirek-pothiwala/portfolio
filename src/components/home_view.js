@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import "./home_view.css";
-import lookLeft from "../../assets/images/demon.png";
-import lookRight from "../../assets/images/wink.png";
-import CoderView from "../CoderView/coder_view";
-import GamerView from "../GamerView/gamer_view";
+import lookLeft from "../assets/images/demon.png";
+import lookRight from "../assets/images/wink.png";
+import CoderView from "./coder_view";
+import GamerView from "./gamer_view";
 
 const HomeView = () => {
   const [clipPercent, setClipPercent] = useState(50);

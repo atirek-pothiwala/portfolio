@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
-import "./audio_button.css";
-import imgPlay from "../../assets/images/play.png";
-import imgPause from "../../assets/images/pause.png";
-import music from "../../assets/media/music.mp3";
 import { useState } from "react";
+import imgPlay from "../assets/images/play.png";
+import imgPause from "../assets/images/pause.png";
+import music from "../assets/media/music.mp3";
 
 const AudioButton = () => {
   const [audioStatus, setAudioStatus] = useState(false);

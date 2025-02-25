@@ -1,6 +1,5 @@
 import React from "react";
-import "./experience_view.css";
-import ExperienceViewItem from "../ExperienceViewItem/experience_view_item";
+import ExperienceViewItem from "./experience_view_item";
 
 const ExperienceView = () => {
   return (

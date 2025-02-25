@@ -1,6 +1,5 @@
 import React from "react";
-import "./send_button.css";
-import imgSend from "../../assets/images/mail.png";
+import imgSend from "../assets/images/mail.png";
 
 const SendButton = ({ name, subject, message }) => {
   const sendMail = () => {

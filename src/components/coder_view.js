@@ -1,8 +1,7 @@
 import React from "react";
-import "./coder_view.css";
-import ImageButton from "../ImageButton/image_button";
-import imgLinkedin from "../../assets/images/linkedin.png";
-import imgGithub from "../../assets/images/github.png";
+import ImageButton from "./image_button";
+import imgLinkedin from "../assets/images/linkedin.png";
+import imgGithub from "../assets/images/github.png";
 
 const CoderView = ({ opacity }) => {
   return (

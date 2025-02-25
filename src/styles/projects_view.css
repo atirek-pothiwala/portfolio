@@ -1,0 +1,68 @@
+#projects-view {
+  height: auto;
+  max-width: 80vw;
+  padding-left: 26rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+  overflow: hidden;
+}
+
+.projects-view-title {
+  font-family: "Reggae One", sans-serif;
+  font-size: 3.5rem;
+}
+
+.projects-view-title-highlight {
+  font-family: "Reggae One", sans-serif;
+  font-size: 3.5rem;
+  color: #4bff00;
+  text-shadow: 1px 1px 10px #4bff00;
+  display: inline-block;
+}
+
+.projects-view-content {
+  margin-top: 2rem;
+  padding: 1.5vw;
+  border-radius: 1rem;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 2rem;
+}
+
+.projects-view-content::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .projects-view-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  #projects-view {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .projects-view-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1300px) {
+  .projects-view-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1700px) {
+  .projects-view-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

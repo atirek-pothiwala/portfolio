@@ -1,6 +1,5 @@
 import React from "react";
-import "./resume_button.css";
-import imgDownload from "../../assets/images/cloud.png";
+import imgDownload from "../assets/images/cloud.png";
 
 const ResumeButton = () => {
   const download = async () => {

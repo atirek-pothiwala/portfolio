@@ -1,7 +1,6 @@
 import React from "react";
-import "./profile_view.css";
-import imgProfile from "../../assets/images/profile.jpg";
-import ContactButton from "../ContactButton/contact_button";
+import imgProfile from "../assets/images/profile.jpg";
+import ContactButton from "./contact_button";
 
 const ProfileView = () => {
   return (

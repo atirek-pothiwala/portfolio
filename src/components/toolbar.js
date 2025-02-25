@@ -1,9 +1,8 @@
 import React from "react";
-import "./toolbar.css";
-import logo from "../../assets/images/logo.png";
-import ResumeButton from "../ResumeButton/resume_button";
+import logo from "../assets/images/logo.png";
+import ResumeButton from "./resume_button";
 
-const toolbar = () => {
+const Toolbar = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element == null) {
@@ -32,6 +31,12 @@ const toolbar = () => {
         </div>
         <div
           className="tabItem"
+          onClick={() => scrollToSection("projects-view")}
+        >
+          Projects
+        </div>
+        <div
+          className="tabItem"
           onClick={() => scrollToSection("contact-view")}
         >
           Contact
@@ -42,4 +47,4 @@ const toolbar = () => {
   );
 };
 
-export default toolbar;
+export default Toolbar;

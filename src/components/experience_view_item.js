@@ -1,7 +1,6 @@
 import React from "react";
-import "./experience_view_item.css";
-import imgTopRightBlack from "../../assets/images/top-right-black.png";
-import imgTopRightWhite from "../../assets/images/top-right-white.png";
+import imgTopRightBlack from "../assets/images/top-right-black.png";
+import imgTopRightWhite from "../assets/images/top-right-white.png";
 
 const ExperienceViewItem = ({ id, title, subtitle, years }) => {
   function onMouseEnter() {

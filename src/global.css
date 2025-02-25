@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  background: transparent;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background: #021233;
+  color: white;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.app-profile {
+  height: auto;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+}
+
+@media (max-width: 1024px) {
+  .app-profile {
+    flex-direction: column;
+  }
+}
+
+@import url("./styles/audio_button.css");
+@import url("./styles/coder_view.css");
+@import url("./styles/contact_button.css");
+@import url("./styles/contact_view.css");
+@import url("./styles/experience_view.css");
+@import url("./styles/experience_view_item.css");
+@import url("./styles/footer_view.css");
+@import url("./styles/gamer_view.css");
+@import url("./styles/home_view.css");
+@import url("./styles/image_button.css");
+@import url("./styles/profile_view.css");
+@import url("./styles/project_view_item.css");
+@import url("./styles/projects_view.css");
+@import url("./styles/resume_button.css");
+@import url("./styles/send_button.css");
+@import url("./styles/toolbar.css");

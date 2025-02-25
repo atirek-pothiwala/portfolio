@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./contact_view.css";
-import SendButton from "../SendButton/send_button";
+import SendButton from "./send_button";
 
 const ContactView = () => {
   const [formData, setFormData] = useState({

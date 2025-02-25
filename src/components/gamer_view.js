@@ -1,9 +1,8 @@
 import React from "react";
-import "./gamer_view.css";
-import ImageButton from "../ImageButton/image_button";
-import imgDiscord from "../../assets/images/discord.png";
-import imgInstagram from "../../assets/images/instagram.png";
-import imgYoutube from "../../assets/images/youtube.png";
+import ImageButton from "./image_button";
+import imgDiscord from "../assets/images/discord.png";
+import imgInstagram from "../assets/images/instagram.png";
+import imgYoutube from "../assets/images/youtube.png";
 
 const GamerView = ({ opacity }) => {
   return (

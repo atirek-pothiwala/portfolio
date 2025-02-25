@@ -1,6 +1,5 @@
 import React from "react";
-import "./contact_button.css";
-import imgEmail from "../../assets/images/email.png";
+import imgEmail from "../assets/images/email.png";
 
 const ContactButton = () => {
   const scrollToSection = (id) => {
