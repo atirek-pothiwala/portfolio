@@ -8,8 +8,8 @@
 }
 
 body {
-  background: #021233;
-  color: white;
+  background: var(--secondary-color);
+  color: var(--title-color);
   overflow: hidden;
   overflow-y: auto;
 }
@@ -31,6 +31,22 @@ body {
   }
 }
 
+:root {
+  --primary-color: #4bff00;
+  --secondary-color: #021233;
+  --title-color: white;
+  --subtitle-color: rgb(255, 255, 255, 0.75);
+  --button-color: white;
+  --button-hover-color: black;
+  --button-title-color: black;
+  --button-disabled-color: gray;
+  --button-title-hover-color: white;
+  --button-title-disabled-color: white;
+  --card-color: rgb(0, 0, 0, 0.25);
+  --card-border-color: rgb(255, 255, 255, 0.05);
+  --card-hover-color: rgb(255, 255, 255, 0.05);
+}
+
 @import url("./styles/audio_button.css");
 @import url("./styles/coder_view.css");
 @import url("./styles/contact_button.css");
@@ -46,4 +62,5 @@ body {
 @import url("./styles/projects_view.css");
 @import url("./styles/resume_button.css");
 @import url("./styles/send_button.css");
+@import url("./styles/tech_view.css");
 @import url("./styles/toolbar.css");

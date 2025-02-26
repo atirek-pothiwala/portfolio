@@ -1,7 +1,7 @@
 .send-button {
   height: 3rem;
-  background: white;
-  color: black;
+  background: var(--button-color);
+  color: var(--button-title-color);
   border: none;
   margin-left: auto;
   margin-right: 0;
@@ -27,17 +27,18 @@
 }
 
 .send-button:hover {
-  background: black;
-  color: white;
-  box-shadow: 1px 1px 10px 2.5px #4bff00;
+  background: var(--button-hover-color);
+  color: var(--button-title-hover-color);
+  box-shadow: 1px 1px 10px 2.5px var(--primary-color);
 }
 
 .send-button:disabled {
-  background: gray;
-  color: white;
+  background: var(--button-disabled-color);
+  color: var(--button-title-disabled-color);
 }
+
 .send-button:disabled:hover {
-  box-shadow: 1px 1px 10px 2.5px white;
+  box-shadow: none;
 }
 
 .send-button img {

@@ -1,14 +1,15 @@
 #experience-view-item {
-  background: rgb(0, 0, 0, 0.25);
+  background: var(--card-color);
   padding: 1.5rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  border: 1px solid var(--card-border-color);
 }
 
 #experience-view-item:hover {
-  background: rgb(255, 255, 255, 0.1);
+  background: var(--card-hover-color);
 }
 
 #experience-view-item img {
@@ -16,13 +17,13 @@
   height: 2.5rem;
   margin-left: auto;
   padding: 0.8rem;
-  background: white;
+  background: var(--button-color);
   border-radius: 1rem;
 }
 
 #experience-view-item:hover img {
-  background: black;
-  box-shadow: 1px 1px 10px 2.5px #4bff00;
+  background: var(--button-hover-color);
+  box-shadow: 1px 1px 10px 2.5px var(--primary-color);
 }
 
 .experience-view-item-title {
@@ -32,10 +33,10 @@
 .experience-view-item-subtitle {
   margin: 1rem 0;
   font-size: 1.1rem;
-  color: rgb(255, 255, 255, 0.75);
+  color: var(--subtitle-color);
 }
 
 .experience-view-item-years {
   font-size: 0.9rem;
-  color: rgb(255, 255, 255, 0.75);
+  color: var(--subtitle-color);
 }

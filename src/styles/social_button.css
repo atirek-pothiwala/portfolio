@@ -1,0 +1,12 @@
+#social-button {
+  padding: 0.25rem;
+  width: 2rem;
+  width: 2rem;
+  object-fit: cover;
+}
+
+#social-button:hover {
+  box-shadow: 1px 1px 10px 2.5px var(--primary-color);
+  border-radius: 1rem;
+  background: var(--primary-color);
+}

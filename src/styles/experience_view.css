@@ -17,7 +17,7 @@
 .experience-view-title-highlight {
   font-family: "Reggae One", sans-serif;
   font-size: 3.5rem;
-  color: #4bff00;
-  text-shadow: 1px 1px 10px #4bff00;
+  color: var(--primary-color);
+  text-shadow: 1px 1px 10px var(--primary-color);
   display: inline-block;
 }

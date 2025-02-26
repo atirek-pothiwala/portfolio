@@ -35,6 +35,9 @@ const Toolbar = () => {
         >
           Projects
         </div> */}
+        <div className="tabItem" onClick={() => scrollToSection("tech-view")}>
+          Technologies
+        </div>
         <div
           className="tabItem"
           onClick={() => scrollToSection("contact-view")}

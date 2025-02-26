@@ -1,0 +1,41 @@
+#tech-view-item {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--card-border-color);
+  border-radius: 1rem;
+  background: var(--card-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+#tech-view-item:hover {
+  background: var(--card-hover-color);
+}
+
+#tech-view-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#tech-view-item img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+}
+
+.tech-view-item-title {
+  color: var(--title-color);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.tech-view-item-subtitle {
+  color: var(--subtitle-color);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
