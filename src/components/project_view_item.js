@@ -1,8 +1,9 @@
 import React from "react";
-import imgAndroid from "../assets/images/android.png";
-import imgApple from "../assets/images/apple.png";
+import imgAndroid from "../assets/frameworks/android.png";
+import imgApple from "../assets/frameworks/apple.png";
+import imgFlutter from "../assets/frameworks/flutter.png";
 
-const ProjectViewItem = ({ src, alt, androidUrl, appleUrl }) => {
+const ProjectViewItem = ({ src, alt, androidUrl, appleUrl, flutterUrl }) => {
   const openAndroidStore = () => {
     const link = document.createElement("a");
     link.href = androidUrl;
@@ -21,6 +22,15 @@ const ProjectViewItem = ({ src, alt, androidUrl, appleUrl }) => {
     document.body.removeChild(link);
   };
 
+  const openFlutter = () => {
+    const link = document.createElement("a");
+    link.href = flutterUrl;
+    link.target = "_blank";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="project-view-item">
       <img src={src} alt={alt} />
@@ -28,14 +38,20 @@ const ProjectViewItem = ({ src, alt, androidUrl, appleUrl }) => {
         <img
           hidden={androidUrl === undefined}
           src={imgAndroid}
-          alt="Android Playstore"
+          alt="Android"
           onClick={openAndroidStore}
         />
         <img
           hidden={appleUrl === undefined}
           src={imgApple}
-          alt="Apple Appstore"
+          alt="Apple"
           onClick={openAppleStore}
+        />
+        <img
+          hidden={flutterUrl === undefined}
+          src={imgFlutter}
+          alt="Flutter"
+          onClick={openFlutter}
         />
       </div>
     </section>

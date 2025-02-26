@@ -27,11 +27,12 @@
 }
 
 #project-view-item div img {
-  width: 30%;
-  height: 30%;
+  width: 2.5rem;
+  height: 2.5rem;
   object-fit: cover;
 }
 
 #project-view-item div img:hover {
   box-shadow: 1px 1px 10px 2.5px var(--primary-color);
+  background: white;
 }

@@ -29,12 +29,12 @@ const Toolbar = () => {
         >
           Experience
         </div>
-        {/* <div
+        <div
           className="tabItem"
           onClick={() => scrollToSection("projects-view")}
         >
           Projects
-        </div> */}
+        </div>
         <div className="tabItem" onClick={() => scrollToSection("tech-view")}>
           Technologies
         </div>

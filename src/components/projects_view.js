@@ -3,6 +3,9 @@ import ProjectViewItem from "./project_view_item";
 import imgCzPro from "../assets/projects/czpro.jpg";
 import imgRewardle from "../assets/projects/rewardle.jpg";
 import imgSwirl from "../assets/projects/swirl.jpg";
+import imgConfetti from "../assets/projects/confetti.png";
+import imgIndicator from "../assets/projects/indicator.png";
+import imgInstaBG from "../assets/projects/insta_bg.png";
 
 const ProjectView = () => {
   return (
@@ -27,6 +30,21 @@ const ProjectView = () => {
           appleUrl="https://apps.apple.com/au/app/rewardle/id519685156"
         />
         <ProjectViewItem src={imgSwirl} alt="Swirl" />
+        <ProjectViewItem
+          src={imgIndicator}
+          alt="Knight Indicator"
+          flutterUrl="https://pub.dev/packages/knight_indicator"
+        />
+        <ProjectViewItem
+          src={imgInstaBG}
+          alt="Knight InstaBG"
+          flutterUrl="https://pub.dev/packages/knight_insta_bg"
+        />
+        <ProjectViewItem
+          src={imgConfetti}
+          alt="Knight Confetti"
+          flutterUrl="https://pub.dev/packages/knight_confetti"
+        />
       </div>
     </section>
   );
