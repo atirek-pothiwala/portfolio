@@ -1,7 +1,7 @@
 import React from "react";
 import imgSend from "../assets/images/mail.png";
 
-const SendButton = ({ name, subject, message }) => {
+const SendButton = ({ name, subject, message, disabled }) => {
   const sendMail = () => {
     const encodedName = encodeURIComponent(name);
     const encodedSubject = encodeURIComponent(subject);
@@ -15,7 +15,7 @@ const SendButton = ({ name, subject, message }) => {
   };
   return (
     <div className="send-button-warn">
-      <button className="send-button" onClick={sendMail}>
+      <button disabled={disabled} className="send-button" onClick={sendMail}>
         <img src={imgSend} alt="Send" />
         Send
       </button>

@@ -12,6 +12,10 @@ const ContactView = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const isEnabled = Object.values(formData).every(
+    (value) => value.trim() !== ""
+  );
+
   return (
     <section id="contact-view">
       <div className="contact-view-title">
@@ -59,6 +63,7 @@ const ContactView = () => {
           name={formData.name}
           subject={formData.subject}
           message={formData.message}
+          disabled={!isEnabled}
         />
       </form>
     </section>

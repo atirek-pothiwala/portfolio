@@ -32,6 +32,14 @@
   box-shadow: 1px 1px 10px 2.5px #4bff00;
 }
 
+.send-button:disabled {
+  background: gray;
+  color: white;
+}
+.send-button:disabled:hover {
+  box-shadow: 1px 1px 10px 2.5px white;
+}
+
 .send-button img {
   object-fit: cover;
   height: 2rem;

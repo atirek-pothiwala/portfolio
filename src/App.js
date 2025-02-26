@@ -16,7 +16,7 @@ function App() {
         <ProfileView />
         <ExperienceView />
       </div>
-      <ProjectView />
+      {/* <ProjectView /> */}
       <ContactView />
       <FooterView />
       <AudioButton />
