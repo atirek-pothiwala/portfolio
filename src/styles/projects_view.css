@@ -44,6 +44,12 @@
 }
 
 @media (max-width: 700px) {
+  .projects-view-title {
+    font-size: 2.5rem;
+  }
+  .projects-view-title-highlight {
+    font-size: 2.5rem;
+  }
   .projects-view-content {
     grid-template-columns: repeat(2, 1fr);
   }

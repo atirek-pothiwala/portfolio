@@ -33,7 +33,7 @@ const ProjectView = () => {
         <ProjectViewItem
           src={imgIndicator}
           alt="Knight Indicator"
-          flutterUrl="https://pub.dev/packages/knight_indicator"
+          flutterUrl="https://pub.dev/packages/knight_page_indicator"
         />
         <ProjectViewItem
           src={imgInstaBG}
