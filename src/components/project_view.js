@@ -1,22 +1,22 @@
 import React from "react";
 import ProjectViewItem from "./project_view_item";
-import imgCzPro from "../assets/projects/czpro.jpg";
-import imgRewardle from "../assets/projects/rewardle.jpg";
-import imgSwirl from "../assets/projects/swirl.jpg";
+import imgCzPro from "../assets/projects/czpro.png";
+import imgRewardle from "../assets/projects/rewardle.png";
+import imgSwirl from "../assets/projects/swirl.png";
 import imgConfetti from "../assets/projects/confetti.png";
 import imgIndicator from "../assets/projects/indicator.png";
 import imgInstaBG from "../assets/projects/insta_bg.png";
 
 const ProjectView = () => {
   return (
-    <section id="projects-view">
-      <div className="projects-view-title">
+    <section id="project-view">
+      <div className="project-view-title">
         Recent Projects
         <br />
         and&nbsp;
-        <span className="projects-view-title-highlight">Achievements</span>
+        <span className="project-view-title-highlight">Achievements</span>
       </div>
-      <div className="projects-view-content">
+      <div className="project-view-content">
         <ProjectViewItem
           src={imgCzPro}
           alt="C'z Pro"
@@ -29,7 +29,11 @@ const ProjectView = () => {
           androidUrl="https://play.google.com/store/apps/details?id=com.rewardle.rewardle&hl=en_IN"
           appleUrl="https://apps.apple.com/au/app/rewardle/id519685156"
         />
-        <ProjectViewItem src={imgSwirl} alt="Swirl" />
+        <ProjectViewItem
+          src={imgSwirl}
+          alt="Swirl"
+          webUrl="https://www.goswirl.ai"
+        />
         <ProjectViewItem
           src={imgIndicator}
           alt="Knight Indicator"

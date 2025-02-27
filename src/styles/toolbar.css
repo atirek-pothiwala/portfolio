@@ -7,7 +7,7 @@
   position: sticky;
   top: 0;
   z-index: 3;
-  background: rgb(0, 0, 0, 0.25);
+  background: var(--card-color);
 }
 
 .logo {
@@ -17,28 +17,48 @@
 }
 
 .tabs {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background: rgb(255, 255, 255, 0.01);
-  padding: 1.5vh 0.5vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  background: black;
+  padding: 1vh 1vw;
   border-radius: 1vh;
+  gap: 1vw;
+}
+
+.tabItem {
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+}
+
+.tabs img {
+  padding: 0.25rem;
+  cursor: pointer;
+  width: 2rem;
+  width: 2rem;
+  object-fit: cover;
+}
+
+.tabs img:hover {
+  box-shadow: 1px 1px 10px 2.5px var(--primary-color);
+  border-radius: 1rem;
+  background: var(--selector-color);
 }
 
 @media (max-width: 600px) {
   .tabs {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: repeat(5, 1fr);
   }
-}
 
-.tabItem {
-  margin: 0 1vw;
-  cursor: pointer;
-  font-size: 1rem;
-  color: #fff;
-}
+  .tabs img {
+    width: 1.5rem;
+    width: 1.5rem;
+  }
 
-.tabItem:hover {
-  text-shadow: 1px 1px 10px #4bff00;
+  .logo {
+    object-fit: cover;
+    height: auto;
+    width: 3rem;
+  }
 }

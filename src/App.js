@@ -5,7 +5,7 @@ import ProfileView from "./components/profile_view";
 import ExperienceView from "./components/experience_view";
 import FooterView from "./components/footer_view";
 import ContactView from "./components/contact_view";
-import ProjectView from "./components/projects_view";
+import ProjectView from "./components/project_view";
 import TechView from "./components/tech_view";
 
 function App() {

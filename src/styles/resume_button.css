@@ -6,7 +6,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
   border-radius: 0.5rem;
   font-weight: 600;
   text-transform: capitalize;
@@ -21,7 +21,7 @@
 .resume-button:hover {
   background: var(--button-hover-color);
   color: var(--button-title-hover-color);
-  box-shadow: 1px 1px 10px 2.5px #4bff00;
+  box-shadow: 1px 1px 10px 2.5px var(--primary-color);
 }
 
 .resume-button img {

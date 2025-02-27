@@ -9,7 +9,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
   border-radius: 0.5rem;
   font-weight: 600;
   font-size: medium;
@@ -23,7 +23,8 @@
   margin-right: 0;
   font-weight: normal;
   font-size: small;
-  color: rgb(255, 255, 255, 0.5);
+  text-align: end;
+  color: var(--warn-color);
 }
 
 .send-button:hover {

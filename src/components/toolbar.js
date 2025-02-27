@@ -1,6 +1,11 @@
 import React from "react";
 import logo from "../assets/images/logo.png";
 import ResumeButton from "./resume_button";
+import imgHome from "../assets/tabs/home.png";
+import imgWork from "../assets/tabs/work.png";
+import imgProject from "../assets/tabs/project.png";
+import imgTechnology from "../assets/tabs/technology.png";
+import imgContact from "../assets/tabs/contact.png";
 
 const Toolbar = () => {
   const scrollToSection = (id) => {
@@ -20,30 +25,31 @@ const Toolbar = () => {
     <nav className="toolbar">
       <img src={logo} alt="Logo" className="logo" />
       <div className="tabs">
-        <div className="tabItem" onClick={() => scrollToSection("home-view")}>
-          Home
-        </div>
-        <div
-          className="tabItem"
+        <img
+          src={imgHome}
+          alt="Home"
+          onClick={() => scrollToSection("home-view")}
+        />
+        <img
+          src={imgWork}
+          alt="Experience"
           onClick={() => scrollToSection("experience-view")}
-        >
-          Experience
-        </div>
-        <div
-          className="tabItem"
-          onClick={() => scrollToSection("projects-view")}
-        >
-          Projects
-        </div>
-        <div className="tabItem" onClick={() => scrollToSection("tech-view")}>
-          Technologies
-        </div>
-        <div
-          className="tabItem"
+        />
+        <img
+          src={imgProject}
+          alt="Projects"
+          onClick={() => scrollToSection("project-view")}
+        />
+        <img
+          src={imgTechnology}
+          alt="Technologies"
+          onClick={() => scrollToSection("tech-view")}
+        />
+        <img
+          src={imgContact}
+          alt="Contact"
           onClick={() => scrollToSection("contact-view")}
-        >
-          Contact
-        </div>
+        />
       </div>
       <ResumeButton />
     </nav>

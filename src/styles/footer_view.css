@@ -5,4 +5,20 @@
   bottom: 0;
   z-index: 3;
   background: var(--card-color);
+  text-align: center;
+}
+
+.heart {
+  display: inline-block;
+  animation: heartbeat 1s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }

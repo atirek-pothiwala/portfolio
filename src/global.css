@@ -45,6 +45,8 @@ body {
   --card-color: rgb(0, 0, 0, 0.25);
   --card-border-color: rgb(255, 255, 255, 0.05);
   --card-hover-color: rgb(255, 255, 255, 0.05);
+  --warn-color: rgb(255, 255, 255, 0.5);
+  --selector-color: rgb(75, 255, 0, 0.75);
 }
 
 @import url("./styles/audio_button.css");
@@ -59,7 +61,7 @@ body {
 @import url("./styles/image_button.css");
 @import url("./styles/profile_view.css");
 @import url("./styles/project_view_item.css");
-@import url("./styles/projects_view.css");
+@import url("./styles/project_view.css");
 @import url("./styles/resume_button.css");
 @import url("./styles/send_button.css");
 @import url("./styles/tech_view.css");
