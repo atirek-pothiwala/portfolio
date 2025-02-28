@@ -22,6 +22,8 @@ import imgSqlite from "../assets/skills/sqlite.png";
 import imgGithub from "../assets/skills/github.png";
 import imgRazorpay from "../assets/skills/razorpay.png";
 import imgChatGPT from "../assets/skills/chatgpt.png";
+import imgMVVM from "../assets/skills/mvvm.png";
+import imgMVC from "../assets/skills/mvc.png";
 
 const TechView = () => {
   return (
@@ -44,6 +46,8 @@ const TechView = () => {
         <TechViewItem src={imgIOS} title="iOS" subtitle="Framework" />
         <TechViewItem src={imgFlutter} title="Flutter" subtitle="Framework" />
         <TechViewItem src={imgFirebase} title="Firebase" subtitle="Framework" />
+        <TechViewItem src={imgMVVM} title="MVVM" subtitle="Design Pattern" />
+        <TechViewItem src={imgMVC} title="MVC" subtitle="Design Pattern" />
         <TechViewItem src={imgJava} title="Java" subtitle="Language" />
         <TechViewItem src={imgSwift} title="Swift" subtitle="Language" />
         <TechViewItem src={imgDart} title="Dart" subtitle="Language" />
