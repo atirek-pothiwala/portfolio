@@ -21,9 +21,13 @@ const Toolbar = () => {
     });
   };
 
+  const onRefresh = () => {
+    window.location.reload();
+  };
+
   return (
     <nav className="toolbar">
-      <img src={logo} alt="Logo" className="logo" />
+      <img src={logo} alt="Logo" className="logo" onClick={onRefresh} />
       <div className="tabs">
         <img
           src={imgHome}
