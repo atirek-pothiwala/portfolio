@@ -31,7 +31,7 @@ cd portfolio
 
 ### 3️⃣ **Install Dependencies**
 
-If this project uses a build system like React, run:
+This project uses a React build system, run:
 
 ```bash
 npm install
