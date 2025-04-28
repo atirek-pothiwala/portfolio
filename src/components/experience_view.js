@@ -5,7 +5,7 @@ const ExperienceView = () => {
   return (
     <section id="experience-view">
       <div className="experience-view-title">
-        Over 8 Years of <br />
+        Over 9 Years of <br />
         Development&nbsp;
         <span className="experience-view-title-highlight">Expertise</span>
       </div>

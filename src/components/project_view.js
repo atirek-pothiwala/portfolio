@@ -6,6 +6,9 @@ import imgSwirl from "../assets/projects/swirl.png";
 import imgConfetti from "../assets/projects/confetti.png";
 import imgIndicator from "../assets/projects/indicator.png";
 import imgInstaBG from "../assets/projects/insta_bg.png";
+import imgRecipes from "../assets/projects/recipes.png";
+import imgWeather from "../assets/projects/weather.png";
+import imgTaskmate from "../assets/projects/taskmate.png";
 
 const ProjectView = () => {
   return (
@@ -28,6 +31,22 @@ const ProjectView = () => {
           alt="Rewardle"
           androidUrl="https://play.google.com/store/apps/details?id=com.rewardle.rewardle&hl=en_IN"
           appleUrl="https://apps.apple.com/au/app/rewardle/id519685156"
+        />
+        <ProjectViewItem
+          src={imgRecipes}
+          alt="Recipes"
+          appleUrl="https://github.com/atirek-pothiwala/ios-recipes-app"
+          backendUrl="https://github.com/atirek-pothiwala/nodejs-recipes-backend"
+        />
+        <ProjectViewItem
+          src={imgWeather}
+          alt="Weather"
+          appleUrl="https://github.com/atirek-pothiwala/ios-weather-app"
+        />
+        <ProjectViewItem
+          src={imgTaskmate}
+          alt="Taskmate"
+          appleUrl="https://github.com/atirek-pothiwala/ios-taskmate-app"
         />
         <ProjectViewItem
           src={imgSwirl}

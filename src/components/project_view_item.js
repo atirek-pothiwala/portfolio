@@ -3,6 +3,7 @@ import imgAndroid from "../assets/frameworks/android.png";
 import imgApple from "../assets/frameworks/apple.png";
 import imgFlutter from "../assets/frameworks/flutter.png";
 import imgWeb from "../assets/frameworks/web.png";
+import imgBackend from "../assets/frameworks/nodejs.png";
 
 const ProjectViewItem = ({
   src,
@@ -11,6 +12,7 @@ const ProjectViewItem = ({
   appleUrl,
   flutterUrl,
   webUrl,
+  backendUrl,
 }) => {
   const openAndroidStore = () => {
     const link = document.createElement("a");
@@ -48,6 +50,15 @@ const ProjectViewItem = ({
     document.body.removeChild(link);
   };
 
+  const openBackend = () => {
+    const link = document.createElement("a");
+    link.href = backendUrl;
+    link.target = "_blank";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="project-view-item">
       <img src={src} alt={alt} />
@@ -75,6 +86,12 @@ const ProjectViewItem = ({
           src={imgWeb}
           alt="Web"
           onClick={openWeb}
+        />
+        <img
+          hidden={backendUrl === undefined}
+          src={imgBackend}
+          alt="Backend"
+          onClick={openBackend}
         />
       </div>
     </section>
