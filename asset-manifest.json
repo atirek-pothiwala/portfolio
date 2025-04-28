@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.c62f9b91.css",
-    "main.js": "/portfolio/static/js/main.1064291f.js",
+    "main.js": "/portfolio/static/js/main.96334cab.js",
     "static/media/music.mp3": "/portfolio/static/media/music.16caddaecf240ef1334c.mp3",
     "static/media/profile.jpg": "/portfolio/static/media/profile.0bcb397ff8862c2b20e6.jpg",
     "static/media/logo.png": "/portfolio/static/media/logo.d6d704c52a2ffd53c952.png",
@@ -10,9 +10,9 @@
     "static/media/bloc.png": "/portfolio/static/media/bloc.01a6967edd89bf6ca95a.png",
     "static/media/mvvm.png": "/portfolio/static/media/mvvm.c9c387ab6f1ba8093dba.png",
     "static/media/taskmate.png": "/portfolio/static/media/taskmate.a9fc2d2af9e509917039.png",
-    "static/media/weather.png": "/portfolio/static/media/weather.dca8965025407147126a.png",
     "static/media/demon.png": "/portfolio/static/media/demon.30536a64c3f894d89666.png",
     "static/media/swirl.png": "/portfolio/static/media/swirl.630581a868be2b7bceb4.png",
+    "static/media/weather.png": "/portfolio/static/media/weather.eaa3b52d4aa89c7061de.png",
     "static/media/confetti.png": "/portfolio/static/media/confetti.d857df704a8ae0e0df57.png",
     "static/media/insta_bg.png": "/portfolio/static/media/insta_bg.952843652700c310d150.png",
     "static/media/czpro.png": "/portfolio/static/media/czpro.e3cde99c8e3baaac7dfa.png",
@@ -23,10 +23,10 @@
     "static/media/cloud.png": "/portfolio/static/media/cloud.1e3c859e8d1e29475281.png",
     "index.html": "/portfolio/index.html",
     "main.c62f9b91.css.map": "/portfolio/static/css/main.c62f9b91.css.map",
-    "main.1064291f.js.map": "/portfolio/static/js/main.1064291f.js.map"
+    "main.96334cab.js.map": "/portfolio/static/js/main.96334cab.js.map"
   },
   "entrypoints": [
     "static/css/main.c62f9b91.css",
-    "static/js/main.1064291f.js"
+    "static/js/main.96334cab.js"
   ]
 }
