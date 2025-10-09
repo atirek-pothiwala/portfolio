@@ -9,6 +9,9 @@ import imgInstaBG from "../assets/projects/insta_bg.png";
 import imgRecipes from "../assets/projects/recipes.png";
 import imgWeather from "../assets/projects/weather.png";
 import imgTaskmate from "../assets/projects/taskmate.png";
+import imgJournal from "../assets/projects/journal.png";
+import imgRSP from "../assets/projects/rock-paper-scissors.png";
+import imgTTT from "../assets/projects/tic-tac-toe.png";
 
 const ProjectView = () => {
   return (
@@ -47,6 +50,21 @@ const ProjectView = () => {
           src={imgTaskmate}
           alt="Taskmate"
           appleUrl="https://github.com/atirek-pothiwala/ios-taskmate-app"
+        />
+        <ProjectViewItem
+          src={imgJournal}
+          alt="Journal"
+          appleUrl="https://github.com/atirek-pothiwala/ios-journal-app"
+        />
+        <ProjectViewItem
+          src={imgRSP}
+          alt="Rock-Paper-Scissors"
+          appleUrl="https://github.com/atirek-pothiwala/rock-paper-scissors"
+        />
+        <ProjectViewItem
+          src={imgTTT}
+          alt="Tic-Tac-Toe"
+          appleUrl="https://github.com/atirek-pothiwala/tictactoe"
         />
         <ProjectViewItem
           src={imgSwirl}
