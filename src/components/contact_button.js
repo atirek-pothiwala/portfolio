@@ -1,19 +1,8 @@
 import React from "react";
 import imgEmail from "../assets/images/email.png";
+import { scrollToSection } from "../utils/navigation";
 
 const ContactButton = () => {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element == null) {
-      return;
-    }
-    const elementPosition =
-      element.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({
-      top: elementPosition - 160,
-      behavior: "smooth",
-    });
-  };
   return (
     <div
       className="contact-button"

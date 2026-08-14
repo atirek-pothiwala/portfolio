@@ -1,53 +1,37 @@
 # 🚀 My Portfolio Website
 
-This is a customizable personal portfolio website!  
-You can easily **copy this repository to your GitHub account** and deploy it using **GitHub Pages**.
+This is a customizable personal portfolio website.  
+Fork the repository, customize the content, and deploy automatically to **GitHub Pages**.
+
+Live site: https://atirek-pothiwala.github.io/portfolio
 
 ---
 
-## 📌 Steps to Use
+## 📌 Quick Start
 
-### 1️⃣ **Fork the Repository**
-- Click the **Fork** button on the top right of this page.
-- Select your GitHub account.
-- GitHub will create a copy of this repo in your account.
-
----
-
-### 2️⃣ **Clone the Repository**
-On your local machine, open the terminal:
+### 1. Fork and clone
 
 ```bash
 git clone https://github.com/atirek-pothiwala/portfolio.git
-```
-
-Navigate into your project:
-
-```bash
 cd portfolio
 ```
 
----
-
-### 3️⃣ **Install Dependencies**
-
-This project uses a React build system, run:
+### 2. Install and run locally
 
 ```bash
 npm install
+npm start
 ```
 
----
+The dev server runs at http://localhost:3000/portfolio.
 
-### 4️⃣ **Make Your Changes**
+### 3. Build for production
 
-- Open the code in your favorite editor (e.g., **VS Code**).
-- Replace text, images, and sections as per your portfolio.
-- Save your changes.
+```bash
+npm run build
+```
 
----
-
-### 5️⃣ **Commit & Push Changes**
+### 4. Commit and push
 
 ```bash
 git add .
@@ -57,58 +41,74 @@ git push origin master
 
 ---
 
-### 6️⃣ **Deploy to GitHub Pages**
+## 🚀 Automatic Deployment (GitHub Pages)
 
-Make sure `package.json` has the correct homepage link:
+This repository deploys automatically when changes are pushed to `master`.
+
+### One-time GitHub setup
+
+1. Open **Settings → Pages** in your GitHub repository.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Merge to `master` (or push directly). The workflow in `.github/workflows/deploy.yml` builds and publishes the site.
+
+### Custom domain / repository name
+
+If you fork the repo or change its name, update the `homepage` field in `package.json`:
 
 ```json
-"homepage": "https://your-username.github.io/portfolio"
+"homepage": "https://your-username.github.io/your-repo-name"
 ```
 
-Then deploy:
+### Workflow behavior
 
-```bash
-npm install gh-pages --save-dev
-npm run build
-npm run deploy
-```
-
-The `gh-pages` package will publish your website to:
-
-```
-https://your-username.github.io/portfolio/
-```
+| Event | Action |
+| --- | --- |
+| Push to `master` | Build + deploy to GitHub Pages |
+| Pull request to `master` | Build only (no deploy) |
+| Manual | Run **Deploy to GitHub Pages** from the Actions tab |
 
 ---
 
-## Development
+## 📁 Project Structure
 
-```bash
-npm install
-npm start
+```text
+portfolio/
+├── .github/workflows/deploy.yml   # CI build + GitHub Pages deploy
+├── .cursor/environment.json       # Cloud Agent install config
+├── public/                        # Static assets (favicon, resume PDF, index.html)
+├── src/
+│   ├── App.js                     # Root layout composing all sections
+│   ├── index.js                   # React entry point
+│   ├── global.css                 # Theme variables + style imports
+│   ├── assets/                    # Images, icons, audio grouped by category
+│   ├── components/                # Section and UI components (one per view)
+│   ├── styles/                    # Component-scoped CSS files
+│   └── utils/
+│       └── navigation.js          # Shared scroll + external link helpers
+└── package.json
 ```
 
-Build for production:
+### Architecture notes
 
-```bash
-npm run build
-```
+- **Section-based layout:** Each portfolio section (home, profile, projects, etc.) is a top-level component rendered in `App.js`.
+- **Presentational components:** Items like `ProjectViewItem`, `ExperienceViewItem`, and `TechViewItem` receive data via props from their parent views.
+- **Styling:** Global theme tokens live in `global.css`; most section styles are imported there. A few small components import their own CSS directly.
+- **Navigation:** Toolbar and contact CTA use shared `scrollToSection` from `src/utils/navigation.js`.
+- **External links:** Social, project, and image buttons use shared `openExternalLink` for consistent `target="_blank"` behavior.
 
 ---
 
 ## 💡 Notes
 
-- If you change the repository name, update the `"homepage"` in `package.json` too.
-- After deploying, wait 1-2 minutes for GitHub Pages to update.
-- If changes aren't showing, try a **hard refresh**:
-    - Windows: `Ctrl + Shift + R`
-    - Mac: `Cmd + Shift + R`
+- After deploying, wait 1–2 minutes for GitHub Pages to update.
+- If changes aren't showing, try a hard refresh:
+  - Windows: `Ctrl + Shift + R`
+  - Mac: `Cmd + Shift + R`
 
 ---
 
-## ✅ **That's it! Your personal portfolio is live!**
+## ✅ That's it!
 
-If you face any trouble, feel free to raise an [Issue](https://github.com/atirek-pothiwala/portfolio/issues) in this repo.
+If you run into trouble, open an [Issue](https://github.com/atirek-pothiwala/portfolio/issues).
 
 Happy Coding! 🎉
-
