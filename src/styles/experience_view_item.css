@@ -1,4 +1,4 @@
-#experience-view-item {
+.experience-view-item {
   background: var(--card-color);
   padding: 1.5rem;
   border-radius: 1rem;
@@ -8,11 +8,11 @@
   border: 1px solid var(--card-border-color);
 }
 
-#experience-view-item:hover {
+.experience-view-item:hover {
   background: var(--card-hover-color);
 }
 
-#experience-view-item img {
+.experience-view-item img {
   width: 2.5rem;
   height: 2.5rem;
   margin-left: auto;
@@ -21,7 +21,7 @@
   border-radius: 1rem;
 }
 
-#experience-view-item:hover img {
+.experience-view-item:hover img {
   background: var(--button-hover-color);
   box-shadow: 1px 1px 10px 2.5px var(--primary-color);
 }

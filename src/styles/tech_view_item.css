@@ -1,4 +1,4 @@
-#tech-view-item {
+.tech-view-item {
   width: 100%;
   height: auto;
   border: 1px solid var(--card-border-color);
@@ -12,17 +12,17 @@
   gap: 1rem;
 }
 
-#tech-view-item:hover {
+.tech-view-item:hover {
   background: var(--card-hover-color);
 }
 
-#tech-view-item div {
+.tech-view-item div {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-#tech-view-item img {
+.tech-view-item img {
   width: 2.5rem;
   height: 2.5rem;
   object-fit: cover;

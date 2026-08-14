@@ -1,21 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import imgTopRightBlack from "../assets/images/top-right-black.png";
 import imgTopRightWhite from "../assets/images/top-right-white.png";
 
-const ExperienceViewItem = ({ id, title, subtitle, years }) => {
-  function onMouseEnter() {
-    document.getElementById(id).src = imgTopRightWhite;
-  }
-
-  function onMouseLeave() {
-    document.getElementById(id).src = imgTopRightBlack;
-  }
+const ExperienceViewItem = ({ title, subtitle, years }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <section
-      id="experience-view-item"
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      className="experience-view-item"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div>
         <span className="experience-view-item-title">{title}</span>
@@ -23,10 +17,9 @@ const ExperienceViewItem = ({ id, title, subtitle, years }) => {
         <span className="experience-view-item-years">{years}</span>
       </div>
       <img
-        id={id}
         className="experience-view-item-image"
-        src={imgTopRightBlack}
-        alt="Redirect"
+        src={isHovered ? imgTopRightWhite : imgTopRightBlack}
+        alt=""
       />
     </section>
   );

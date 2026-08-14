@@ -1,11 +1,13 @@
 import React from "react";
 import imgDownload from "../assets/images/cloud.png";
 
+const RESUME_FILE = "atirek-pothiwala-resume.pdf";
+
 const ResumeButton = () => {
-  const download = async () => {
+  const download = () => {
     const link = document.createElement("a");
-    link.href = "./atirek-pothiwala-resume.pdf";
-    link.download = "atirek-pothiwala-resume.pdf";
+    link.href = `${import.meta.env.BASE_URL}${RESUME_FILE}`;
+    link.download = RESUME_FILE;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

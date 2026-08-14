@@ -53,10 +53,12 @@ This repository deploys automatically when changes are pushed to `master`.
 
 ### Custom domain / repository name
 
-If you fork the repo or change its name, update the `homepage` field in `package.json`:
+If you fork the repo or change its name, update the `base` path in `vite.config.js`:
 
-```json
-"homepage": "https://your-username.github.io/your-repo-name"
+```js
+export default defineConfig({
+  base: "/your-repo-name/",
+});
 ```
 
 ### Workflow behavior
@@ -75,13 +77,16 @@ If you fork the repo or change its name, update the `homepage` field in `package
 portfolio/
 ├── .github/workflows/deploy.yml   # CI build + GitHub Pages deploy
 ├── .cursor/environment.json       # Cloud Agent install config
-├── public/                        # Static assets (favicon, resume PDF, index.html)
+├── index.html                     # Vite HTML entry point
+├── vite.config.js                 # Vite config (base path for GitHub Pages)
+├── public/                        # Static assets (favicon, resume PDF)
 ├── src/
 │   ├── App.js                     # Root layout composing all sections
 │   ├── index.js                   # React entry point
 │   ├── global.css                 # Theme variables + style imports
 │   ├── assets/                    # Images, icons, audio grouped by category
-│   ├── components/                # Section and UI components (one per view)
+│   ├── components/                # Section and UI components
+│   ├── data/                      # Portfolio content (experience, projects, skills)
 │   ├── styles/                    # Component-scoped CSS files
 │   └── utils/
 │       └── navigation.js          # Shared scroll + external link helpers
@@ -90,11 +95,21 @@ portfolio/
 
 ### Architecture notes
 
-- **Section-based layout:** Each portfolio section (home, profile, projects, etc.) is a top-level component rendered in `App.js`.
-- **Presentational components:** Items like `ProjectViewItem`, `ExperienceViewItem`, and `TechViewItem` receive data via props from their parent views.
-- **Styling:** Global theme tokens live in `global.css`; most section styles are imported there. A few small components import their own CSS directly.
-- **Navigation:** Toolbar and contact CTA use shared `scrollToSection` from `src/utils/navigation.js`.
-- **External links:** Social, project, and image buttons use shared `openExternalLink` for consistent `target="_blank"` behavior.
+- **Section-based layout:** Each portfolio section is a top-level component in `App.js`.
+- **Content in `src/data/`:** Experience, projects, skills, and profile content live in data modules for easy editing.
+- **Presentational components:** Item components receive props from parent views or mapped data arrays.
+- **Styling:** Theme tokens in `global.css`; all component styles imported centrally there.
+- **Navigation:** Shared `scrollToSection` and `openExternalLink` in `src/utils/navigation.js`.
+- **Build tool:** Vite (faster dev server and production builds than Create React App).
+
+### Customizing content
+
+Edit the files in `src/data/`:
+
+- `profile.js` — name, title, location, social links
+- `experience.js` — work history
+- `projects.js` — project cards and store links
+- `skills.js` — technology stack
 
 ---
 

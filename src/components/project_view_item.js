@@ -32,7 +32,7 @@ const ProjectViewItem = ({
   };
 
   return (
-    <section id="project-view-item">
+    <section className="project-view-item">
       <img src={src} alt={alt} />
       <div>
         {PLATFORM_LINKS.map(({ key, src: platformSrc, alt: platformAlt }) => {
