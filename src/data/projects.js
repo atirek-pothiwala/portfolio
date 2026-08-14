@@ -1,4 +1,5 @@
 import imgCzPro from "../assets/projects/czpro.png";
+import imgCreditWorks from "../assets/projects/credit_works.webp";
 import imgRewardle from "../assets/projects/rewardle.png";
 import imgSwirl from "../assets/projects/swirl.png";
 import imgConfetti from "../assets/projects/confetti.png";
@@ -12,6 +13,13 @@ import imgRSP from "../assets/projects/rock-paper-scissors.png";
 import imgTTT from "../assets/projects/tic-tac-toe.png";
 
 export const projects = [
+  {
+    src: imgCreditWorks,
+    alt: "Experian CreditWorks",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.experian.android&hl=en_US",
+    appleUrl: "https://apps.apple.com/us/app/experian/id1087101090",
+  },
   {
     src: imgCzPro,
     alt: "C'z Pro",

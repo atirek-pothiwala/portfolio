@@ -6,8 +6,8 @@ import imgGithub from "../assets/social/github.png";
 
 export const profile = {
   name: "Atirek Pothiwala",
-  title: "Tech Lead & Mobile App Developer",
-  location: "Vadodara, Gujarat, India",
+  title: "Senior Software Engineer",
+  location: "Hyderabad, Telangana, India (On-site with Experian)",
   image: imgProfile,
   socialLinks: [
     {
