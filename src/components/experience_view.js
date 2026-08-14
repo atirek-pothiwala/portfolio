@@ -5,7 +5,7 @@ const ExperienceView = () => {
   return (
     <section id="experience-view">
       <div className="experience-view-title">
-        Over 9 Years of <br />
+        Over 10 Years of <br />
         Development&nbsp;
         <span className="experience-view-title-highlight">Expertise</span>
       </div>
@@ -13,8 +13,8 @@ const ExperienceView = () => {
       <ExperienceViewItem
         id="btnRedirect1"
         title="Tata Consultancy Services, Gandhinagar"
-        subtitle="Led a team of developers to deliver high-quality software solutions for the C’z Pro project of a Japan based client. Implemented best practices for code quality, performance, and scalability."
-        years="June 2022 - Present (2 years and 8 months)"
+        subtitle="Led a team of developers to deliver high-quality software solutions for the C'z Pro project of a Japan based client. Implemented best practices for code quality, performance, and scalability."
+        years="June 2022 - Present (4 years and 2 months)"
       />
 
       <ExperienceViewItem

@@ -52,7 +52,7 @@ npm install
 ```bash
 git add .
 git commit -m "Updated portfolio content"
-git push origin main
+git push origin master
 ```
 
 ---
@@ -77,6 +77,21 @@ The `gh-pages` package will publish your website to:
 
 ```
 https://your-username.github.io/portfolio/
+```
+
+---
+
+## Development
+
+```bash
+npm install
+npm start
+```
+
+Build for production:
+
+```bash
+npm run build
 ```
 
 ---
