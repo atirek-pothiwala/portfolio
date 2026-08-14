@@ -8,13 +8,13 @@ export const experiences = [
     title: "Netweb Software Pvt. Ltd, Vadodara",
     subtitle:
       "Senior Software Engineer on-site with Experian at Hyderabad. Building and enhancing the Experian mobile platform, including CreditWorks features for US consumers—credit monitoring, FICO scores, and identity protection.",
-    years: "Present (On-site with Experian, Hyderabad)",
+    years: "February 2026 - Present (6 months) — On-site with Experian, Hyderabad",
   },
   {
     title: "Tata Consultancy Services, Gandhinagar",
     subtitle:
       "Led a team of developers to deliver high-quality software solutions for the C'z Pro project of a Japan based client. Implemented best practices for code quality, performance, and scalability.",
-    years: "June 2022 - Jan 2025 (2 years 7 months)",
+    years: "June 2022 - January 2026 (3 years and 7 months)",
   },
   {
     title: "Gauraj Infotech Pvt. Ltd, Vadodara",
