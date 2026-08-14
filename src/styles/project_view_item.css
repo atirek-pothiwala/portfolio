@@ -1,4 +1,4 @@
-#project-view-item {
+.project-view-item {
   position: relative;
   width: 100%;
   height: auto;
@@ -7,14 +7,14 @@
   flex-direction: column;
 }
 
-#project-view-item img {
+.project-view-item img {
   width: 100%;
   height: auto;
   border-radius: 2.5rem;
   object-fit: cover;
 }
 
-#project-view-item div {
+.project-view-item div {
   position: absolute;
   bottom: -7.5%;
   right: 7.5%;
@@ -26,14 +26,14 @@
   gap: 7.5%;
 }
 
-#project-view-item div img {
+.project-view-item div img {
   box-shadow: 1px 1px 2.5px 0.5px var(--secondary-color);
   width: 2.25rem;
   height: 2.25rem;
   object-fit: cover;
 }
 
-#project-view-item div img:hover {
+.project-view-item div img:hover {
   box-shadow: 1px 1px 10px 2.5px var(--primary-color);
   background: white;
 }

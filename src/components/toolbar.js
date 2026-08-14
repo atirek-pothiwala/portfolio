@@ -1,4 +1,5 @@
 import React from "react";
+import { scrollToSection } from "../utils/navigation";
 import logo from "../assets/images/logo.png";
 import ResumeButton from "./resume_button";
 import imgHome from "../assets/tabs/home.png";
@@ -7,20 +8,15 @@ import imgProject from "../assets/tabs/project.png";
 import imgTechnology from "../assets/tabs/technology.png";
 import imgContact from "../assets/tabs/contact.png";
 
-const Toolbar = () => {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element == null) {
-      return;
-    }
-    const elementPosition =
-      element.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({
-      top: elementPosition - 160,
-      behavior: "smooth",
-    });
-  };
+const NAV_ITEMS = [
+  { id: "home-view", src: imgHome, alt: "Home" },
+  { id: "experience-view", src: imgWork, alt: "Experience" },
+  { id: "project-view", src: imgProject, alt: "Projects" },
+  { id: "tech-view", src: imgTechnology, alt: "Technologies" },
+  { id: "contact-view", src: imgContact, alt: "Contact" },
+];
 
+const Toolbar = () => {
   const onRefresh = () => {
     window.location.reload();
   };
@@ -29,31 +25,14 @@ const Toolbar = () => {
     <nav className="toolbar">
       <img src={logo} alt="Logo" className="logo" onClick={onRefresh} />
       <div className="tabs">
-        <img
-          src={imgHome}
-          alt="Home"
-          onClick={() => scrollToSection("home-view")}
-        />
-        <img
-          src={imgWork}
-          alt="Experience"
-          onClick={() => scrollToSection("experience-view")}
-        />
-        <img
-          src={imgProject}
-          alt="Projects"
-          onClick={() => scrollToSection("project-view")}
-        />
-        <img
-          src={imgTechnology}
-          alt="Technologies"
-          onClick={() => scrollToSection("tech-view")}
-        />
-        <img
-          src={imgContact}
-          alt="Contact"
-          onClick={() => scrollToSection("contact-view")}
-        />
+        {NAV_ITEMS.map(({ id, src, alt }) => (
+          <img
+            key={id}
+            src={src}
+            alt={alt}
+            onClick={() => scrollToSection(id)}
+          />
+        ))}
       </div>
       <ResumeButton />
     </nav>

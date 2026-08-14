@@ -14,7 +14,7 @@ const CoderView = ({ opacity }) => {
         </span>
         <p className="coder-view-para">
           Expertised in building high-performance, user-friendly apps ensuring
-          clean and efficiet code.
+          clean and efficient code.
         </p>
         <div>
           <ImageButton

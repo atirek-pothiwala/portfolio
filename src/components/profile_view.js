@@ -1,43 +1,31 @@
 import React from "react";
-import imgProfile from "../assets/images/profile.jpg";
-import imgLinkedin from "../assets/social/linkedin.png";
-import imgFacebook from "../assets/social/facebook.png";
-import imgInstagram from "../assets/social/instagram.png";
-import imgGithub from "../assets/social/github.png";
 import ContactButton from "./contact_button";
 import SocialButton from "./social_button";
+import { profile } from "../data/profile";
 
 const ProfileView = () => {
   return (
     <section id="profile-view">
-      <img className="profile-view-profile" src={imgProfile} alt="Profile" />
-      <span className="profile-view-title">Atirek Pothiwala</span>
+      <img
+        className="profile-view-profile"
+        src={profile.image}
+        alt="Profile"
+      />
+      <span className="profile-view-title">{profile.name}</span>
       <p className="profile-view-para">
-        Tech Lead & Mobile App Developer
+        {profile.title}
         <br />
-        Vadodara, Gujarat, India
+        {profile.location}
       </p>
       <div className="profile-view-social">
-        <SocialButton
-          src={imgLinkedin}
-          alt="Linkedin"
-          url="https://www.linkedin.com/in/atirekpothiwala"
-        />
-        <SocialButton
-          src={imgFacebook}
-          alt="Facebook"
-          url="https://www.facebook.com/atu09"
-        />
-        <SocialButton
-          src={imgInstagram}
-          alt="Instagram"
-          url="https://www.instagram.com/atirek.pothiwala"
-        />
-        <SocialButton
-          src={imgGithub}
-          alt="Github"
-          url="https://github.com/atirek-pothiwala"
-        />
+        {profile.socialLinks.map((link) => (
+          <SocialButton
+            key={link.url}
+            src={link.src}
+            alt={link.alt}
+            url={link.url}
+          />
+        ))}
       </div>
       <ContactButton />
     </section>
