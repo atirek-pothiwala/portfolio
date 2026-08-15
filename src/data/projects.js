@@ -1,5 +1,6 @@
 import imgCzPro from "../assets/projects/czpro.png";
 import imgCreditWorks from "../assets/projects/credit_works.webp";
+import imgBossRush from "../assets/projects/boss_rush.png";
 import imgRewardle from "../assets/projects/rewardle.png";
 import imgSwirl from "../assets/projects/swirl.png";
 import imgConfetti from "../assets/projects/confetti.png";
@@ -34,6 +35,12 @@ export const projects = [
     androidUrl:
       "https://play.google.com/store/apps/details?id=com.rewardle.rewardle&hl=en_IN",
     appleUrl: "https://apps.apple.com/au/app/rewardle/id519685156",
+  },
+  {
+    src: imgBossRush,
+    alt: "Boss Rush",
+    showUnity: true,
+    webUrl: "https://atirek-pothiwala.github.io/Boss-Rush/",
   },
   {
     src: imgRecipes,
