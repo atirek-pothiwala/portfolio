@@ -39,7 +39,7 @@ export const projects = [
   {
     src: imgBossRush,
     alt: "Boss Rush",
-    showUnity: true,
+    unityUrl: "https://github.com/atirek-pothiwala/Boss-Rush",
     webUrl: "https://atirek-pothiwala.github.io/Boss-Rush/",
   },
   {
