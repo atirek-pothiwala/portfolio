@@ -59,12 +59,12 @@ export const projects = [
   {
     src: imgRSP,
     alt: "Rock-Paper-Scissors",
-    appleUrl: "https://github.com/atirek-pothiwala/rock-paper-scissors",
+    unityUrl: "https://github.com/atirek-pothiwala/rock-paper-scissors",
   },
   {
     src: imgTTT,
     alt: "Tic-Tac-Toe",
-    appleUrl: "https://github.com/atirek-pothiwala/tictactoe",
+    unityUrl: "https://github.com/atirek-pothiwala/tictactoe",
   },
   {
     src: imgSwirl,

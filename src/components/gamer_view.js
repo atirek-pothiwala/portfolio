@@ -3,7 +3,7 @@ import ImageButton from "./image_button";
 import imgDiscord from "../assets/images/discord.png";
 import imgInstagram from "../assets/images/instagram.png";
 import imgYoutube from "../assets/images/youtube.png";
-import imgGithub from "../assets/images/github.png";
+import imgUnity from "../assets/frameworks/unity.png";
 
 const GamerView = ({ opacity }) => {
   return (
@@ -18,9 +18,9 @@ const GamerView = ({ opacity }) => {
         </p>
         <div>
           <ImageButton
-            src={imgGithub}
-            alt="Github"
-            url="https://github.com/knight-dev9"
+            src={imgUnity}
+            alt="Unity"
+            url="https://atirek-pothiwala.github.io/Boss-Rush/"
           />
           <ImageButton
             src={imgDiscord}
