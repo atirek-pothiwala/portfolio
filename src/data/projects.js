@@ -1,5 +1,6 @@
 import imgCzPro from "../assets/projects/czpro.png";
 import imgCreditWorks from "../assets/projects/credit_works.webp";
+import imgBossRush from "../assets/projects/boss_rush.png";
 import imgRewardle from "../assets/projects/rewardle.png";
 import imgSwirl from "../assets/projects/swirl.png";
 import imgConfetti from "../assets/projects/confetti.png";
@@ -36,6 +37,12 @@ export const projects = [
     appleUrl: "https://apps.apple.com/au/app/rewardle/id519685156",
   },
   {
+    src: imgBossRush,
+    alt: "Boss Rush",
+    showUnity: true,
+    webUrl: "https://atirek-pothiwala.github.io/Boss-Rush/",
+  },
+  {
     src: imgRecipes,
     alt: "Recipes",
     appleUrl: "https://github.com/atirek-pothiwala/ios-recipes-app",
@@ -59,12 +66,12 @@ export const projects = [
   {
     src: imgRSP,
     alt: "Rock-Paper-Scissors",
-    unityUrl: "https://github.com/atirek-pothiwala/rock-paper-scissors",
+    appleUrl: "https://github.com/atirek-pothiwala/rock-paper-scissors",
   },
   {
     src: imgTTT,
     alt: "Tic-Tac-Toe",
-    unityUrl: "https://github.com/atirek-pothiwala/tictactoe",
+    appleUrl: "https://github.com/atirek-pothiwala/tictactoe",
   },
   {
     src: imgSwirl,
