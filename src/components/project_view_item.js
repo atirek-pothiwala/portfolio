@@ -10,6 +10,7 @@ import { openExternalLink } from "../utils/navigation";
 const PLATFORM_LINKS = [
   { key: "androidUrl", src: imgAndroid, alt: "Android" },
   { key: "appleUrl", src: imgApple, alt: "Apple" },
+  { key: "unityUrl", src: imgUnity, alt: "Unity" },
   { key: "flutterUrl", src: imgFlutter, alt: "Flutter" },
   { key: "webUrl", src: imgWeb, alt: "Web" },
   { key: "backendUrl", src: imgBackend, alt: "Backend" },
@@ -20,14 +21,15 @@ const ProjectViewItem = ({
   alt,
   androidUrl,
   appleUrl,
+  unityUrl,
   flutterUrl,
   webUrl,
   backendUrl,
-  showUnity,
 }) => {
   const links = {
     androidUrl,
     appleUrl,
+    unityUrl,
     flutterUrl,
     webUrl,
     backendUrl,
@@ -37,9 +39,6 @@ const ProjectViewItem = ({
     <section className="project-view-item">
       <img src={src} alt={alt} />
       <div>
-        {showUnity && (
-          <img src={imgUnity} alt="Unity" title="Built with Unity" />
-        )}
         {PLATFORM_LINKS.map(({ key, src: platformSrc, alt: platformAlt }) => {
           const url = links[key];
           if (!url) {
