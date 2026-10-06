@@ -36,7 +36,27 @@ const GameSlide = ({ game }) => {
   }, []);
 
   return (
-    <div className="game-carousel-slide">
+    <article className="game-card">
+      <header className="game-card-header">
+        <h3>{game.alt}</h3>
+        <div className="game-carousel-links">
+          {PLATFORM_LINKS.map(({ key, src, alt }) => {
+            const url = game[key];
+            if (!url) {
+              return null;
+            }
+
+            return (
+              <img
+                key={key}
+                src={src}
+                alt={alt}
+                onClick={() => openExternalLink(url)}
+              />
+            );
+          })}
+        </div>
+      </header>
       <div className="game-carousel-frame" ref={frameRef}>
         {active && game.embedUrl && (
           <iframe
@@ -47,24 +67,7 @@ const GameSlide = ({ game }) => {
           />
         )}
       </div>
-      <div className="game-carousel-links">
-        {PLATFORM_LINKS.map(({ key, src, alt }) => {
-          const url = game[key];
-          if (!url) {
-            return null;
-          }
-
-          return (
-            <img
-              key={key}
-              src={src}
-              alt={alt}
-              onClick={() => openExternalLink(url)}
-            />
-          );
-        })}
-      </div>
-    </div>
+    </article>
   );
 };
 
@@ -193,11 +196,9 @@ const GameView = () => {
 
   return (
     <section id="game-view">
-      <div className="game-view-title">
-        Playable
-        <br />
-        <span className="game-view-title-highlight">Games</span>
-      </div>
+      <h2 className="game-view-title">
+        Playable <span className="game-view-title-highlight">Games</span>
+      </h2>
       <div className="game-carousel">
         <div
           className={`game-carousel-track${canSwipe ? " is-swipeable" : ""}`}
@@ -210,7 +211,9 @@ const GameView = () => {
           onClickCapture={onClickCapture}
         >
           {games.map((game) => (
-            <GameSlide key={game.alt} game={game} />
+            <div className="game-carousel-slide" key={game.alt}>
+              <GameSlide game={game} />
+            </div>
           ))}
         </div>
         {canSwipe && (
