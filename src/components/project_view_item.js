@@ -6,6 +6,7 @@ import imgUnity from "../assets/frameworks/unity.png";
 import imgWeb from "../assets/frameworks/web.png";
 import imgBackend from "../assets/frameworks/nodejs.png";
 import { openExternalLink } from "../utils/navigation";
+import ProjectEmbed from "./project_embed";
 
 const PLATFORM_LINKS = [
   { key: "androidUrl", src: imgAndroid, alt: "Android" },
@@ -19,6 +20,7 @@ const PLATFORM_LINKS = [
 const ProjectViewItem = ({
   src,
   alt,
+  embedUrl,
   androidUrl,
   appleUrl,
   unityUrl,
@@ -37,8 +39,12 @@ const ProjectViewItem = ({
 
   return (
     <section className="project-view-item">
-      <img src={src} alt={alt} />
-      <div>
+      {embedUrl ? (
+        <ProjectEmbed src={embedUrl} poster={src} title={alt} />
+      ) : (
+        <img src={src} alt={alt} />
+      )}
+      <div className="project-view-platforms">
         {PLATFORM_LINKS.map(({ key, src: platformSrc, alt: platformAlt }) => {
           const url = links[key];
           if (!url) {

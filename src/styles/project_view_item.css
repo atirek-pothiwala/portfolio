@@ -14,11 +14,11 @@
   object-fit: cover;
 }
 
-.project-view-item div {
+.project-view-platforms {
   position: absolute;
   bottom: -7.5%;
   right: 7.5%;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26,14 +26,111 @@
   gap: 7.5%;
 }
 
-.project-view-item div img {
+.project-view-platforms img {
   box-shadow: 1px 1px 2.5px 0.5px var(--secondary-color);
   width: 2.25rem;
   height: 2.25rem;
   object-fit: cover;
+  cursor: pointer;
 }
 
-.project-view-item div img:hover {
+.project-view-platforms img:hover {
   box-shadow: 1px 1px 10px 2.5px var(--primary-color);
   background: white;
+}
+
+.project-embed-slot {
+  position: relative;
+  width: 100%;
+}
+
+.project-embed-slot > img {
+  display: block;
+}
+
+.project-embed-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  border: 0;
+  cursor: zoom-out;
+  background: rgba(2, 18, 51, 0.88);
+}
+
+.project-embed {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 2.5rem;
+  background: #0d0d12;
+}
+
+.project-embed.is-zoomed {
+  position: fixed;
+  inset: 5vh 6vw;
+  z-index: 21;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 0 1px var(--primary-color), 0 1.5rem 4rem rgba(0, 0, 0, 0.45);
+}
+
+.project-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #0d0d12;
+}
+
+.project-embed:not(.is-zoomed) iframe {
+  pointer-events: none;
+}
+
+.project-embed-open,
+.project-embed-close {
+  border: 1px solid var(--primary-color);
+  color: var(--title-color);
+  background: rgba(2, 18, 51, 0.82);
+  cursor: pointer;
+  font-family: "Outfit", sans-serif;
+}
+
+.project-embed-open {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0.75rem;
+  border: 0;
+  background: linear-gradient(to top, rgba(2, 18, 51, 0.55), transparent 45%);
+  cursor: zoom-in;
+}
+
+.project-embed-open span {
+  border: 1px solid var(--primary-color);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  background: rgba(2, 18, 51, 0.88);
+  font-size: 0.85rem;
+}
+
+.project-embed-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+}
+
+.project-embed-open:hover span,
+.project-embed-close:hover {
+  background: var(--primary-color);
+  color: var(--button-title-color);
+}
+
+@media (max-width: 700px) {
+  .project-embed.is-zoomed {
+    inset: 2.5vh 2.5vw;
+  }
 }
