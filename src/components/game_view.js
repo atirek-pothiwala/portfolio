@@ -1,6 +1,72 @@
 import React, { useEffect, useRef, useState } from "react";
-import ProjectViewItem from "./project_view_item";
+import imgApple from "../assets/frameworks/apple.png";
+import imgUnity from "../assets/frameworks/unity.png";
+import imgWeb from "../assets/frameworks/web.png";
 import { games } from "../data/games";
+import { openExternalLink } from "../utils/navigation";
+
+const PLATFORM_LINKS = [
+  { key: "unityUrl", src: imgUnity, alt: "Unity" },
+  { key: "webUrl", src: imgWeb, alt: "Web" },
+  { key: "appleUrl", src: imgApple, alt: "Apple" },
+];
+
+const GameSlide = ({ game }) => {
+  const frameRef = useRef(null);
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const node = frameRef.current;
+    if (!node) {
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActive(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "240px" },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="game-carousel-slide">
+      <div className="game-carousel-frame" ref={frameRef}>
+        {active && (
+          <iframe
+            src={game.embedUrl}
+            title={game.alt}
+            allow="autoplay; fullscreen; gamepad; pointer-lock"
+            allowFullScreen
+          />
+        )}
+      </div>
+      <div className="game-carousel-links">
+        {PLATFORM_LINKS.map(({ key, src, alt }) => {
+          const url = game[key];
+          if (!url) {
+            return null;
+          }
+
+          return (
+            <img
+              key={key}
+              src={src}
+              alt={alt}
+              onClick={() => openExternalLink(url)}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
 const GameView = () => {
   const trackRef = useRef(null);
@@ -54,7 +120,7 @@ const GameView = () => {
 
   const onPointerDown = (event) => {
     const interactive = event.target.closest(
-      ".project-view-platforms, .game-carousel-button",
+      "iframe, .game-carousel-links, .game-carousel-button",
     );
     if (event.button !== 0 || interactive) {
       return;
@@ -127,43 +193,43 @@ const GameView = () => {
           onClickCapture={onClickCapture}
         >
           {games.map((game) => (
-            <div className="game-carousel-slide" key={game.alt}>
-              <ProjectViewItem {...game} />
-            </div>
+            <GameSlide key={game.alt} game={game} />
           ))}
         </div>
-        <div className="game-carousel-controls">
-          <button
-            type="button"
-            className="game-carousel-button"
-            aria-label="Previous game"
-            disabled={edges.atStart}
-            onClick={() => scrollBySlide(-1)}
-          >
-            ‹
-          </button>
-          <div className="game-carousel-dots">
-            {games.map((game, index) => (
-              <button
-                key={game.alt}
-                type="button"
-                className="game-carousel-dot"
-                aria-label={`Show ${game.alt}`}
-                aria-current={index === edges.index}
-                onClick={() => scrollBySlide(index - edges.index)}
-              />
-            ))}
+        {games.length > 1 && (
+          <div className="game-carousel-controls">
+            <button
+              type="button"
+              className="game-carousel-button"
+              aria-label="Previous game"
+              disabled={edges.atStart}
+              onClick={() => scrollBySlide(-1)}
+            >
+              ‹
+            </button>
+            <div className="game-carousel-dots">
+              {games.map((game, index) => (
+                <button
+                  key={game.alt}
+                  type="button"
+                  className="game-carousel-dot"
+                  aria-label={`Show ${game.alt}`}
+                  aria-current={index === edges.index}
+                  onClick={() => scrollBySlide(index - edges.index)}
+                />
+              ))}
+            </div>
+            <button
+              type="button"
+              className="game-carousel-button"
+              aria-label="Next game"
+              disabled={edges.atEnd}
+              onClick={() => scrollBySlide(1)}
+            >
+              ›
+            </button>
           </div>
-          <button
-            type="button"
-            className="game-carousel-button"
-            aria-label="Next game"
-            disabled={edges.atEnd}
-            onClick={() => scrollBySlide(1)}
-          >
-            ›
-          </button>
-        </div>
+        )}
       </div>
     </section>
   );

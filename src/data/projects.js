@@ -9,6 +9,8 @@ import imgRecipes from "../assets/projects/recipes.png";
 import imgWeather from "../assets/projects/weather.png";
 import imgTaskmate from "../assets/projects/taskmate.png";
 import imgJournal from "../assets/projects/journal.png";
+import imgRSP from "../assets/projects/rock-paper-scissors.png";
+import imgTTT from "../assets/projects/tic-tac-toe.png";
 
 export const projects = [
   {
@@ -53,6 +55,16 @@ export const projects = [
     src: imgJournal,
     alt: "Journal",
     appleUrl: "https://github.com/atirek-pothiwala/ios-journal-app",
+  },
+  {
+    src: imgRSP,
+    alt: "Rock-Paper-Scissors",
+    appleUrl: "https://github.com/atirek-pothiwala/rock-paper-scissors",
+  },
+  {
+    src: imgTTT,
+    alt: "Tic-Tac-Toe",
+    appleUrl: "https://github.com/atirek-pothiwala/tictactoe",
   },
   {
     src: imgSwirl,

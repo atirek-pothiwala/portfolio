@@ -30,11 +30,10 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-padding-inline: 0.25rem;
-  padding: 2.5rem 0.25rem 2.5rem;
+  padding: 2.5rem 0.25rem 1rem;
   scrollbar-width: none;
   cursor: grab;
   touch-action: pan-x;
-  user-select: none;
 }
 
 .game-carousel-track:active {
@@ -46,8 +45,45 @@
 }
 
 .game-carousel-slide {
-  flex: 0 0 min(18rem, 78%);
+  flex: 0 0 100%;
   scroll-snap-align: start;
+}
+
+.game-carousel-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: #0d0d12;
+  box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+.game-carousel-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #0d0d12;
+}
+
+.game-carousel-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+}
+
+.game-carousel-links img {
+  width: 2.25rem;
+  height: 2.25rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  box-shadow: 1px 1px 2.5px 0.5px var(--secondary-color);
+}
+
+.game-carousel-links img:hover {
+  background: white;
+  box-shadow: 1px 1px 10px 2.5px var(--primary-color);
 }
 
 .game-carousel-controls {
@@ -112,6 +148,6 @@
   }
 
   .game-carousel-slide {
-    flex-basis: min(18rem, 82%);
+    flex-basis: 100%;
   }
 }
