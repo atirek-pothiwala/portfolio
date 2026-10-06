@@ -1,6 +1,5 @@
 import Toolbar from "./components/toolbar";
 import HomeView from "./components/home_view";
-import AudioButton from "./components/audio_button";
 import ProfileView from "./components/profile_view";
 import ExperienceView from "./components/experience_view";
 import FooterView from "./components/footer_view";
@@ -23,7 +22,6 @@ function App() {
       <TechView />
       <ContactView />
       <FooterView />
-      <AudioButton />
     </section>
   );
 }
