@@ -1,6 +1,5 @@
 import imgCzPro from "../assets/projects/czpro.png";
 import imgCreditWorks from "../assets/projects/credit_works.webp";
-import imgBossRush from "../assets/projects/boss_rush.png";
 import imgRewardle from "../assets/projects/rewardle.png";
 import imgSwirl from "../assets/projects/swirl.png";
 import imgConfetti from "../assets/projects/confetti.png";
@@ -10,8 +9,6 @@ import imgRecipes from "../assets/projects/recipes.png";
 import imgWeather from "../assets/projects/weather.png";
 import imgTaskmate from "../assets/projects/taskmate.png";
 import imgJournal from "../assets/projects/journal.png";
-import imgRSP from "../assets/projects/rock-paper-scissors.png";
-import imgTTT from "../assets/projects/tic-tac-toe.png";
 
 export const projects = [
   {
@@ -37,12 +34,6 @@ export const projects = [
     appleUrl: "https://apps.apple.com/au/app/rewardle/id519685156",
   },
   {
-    src: imgBossRush,
-    alt: "Boss Rush",
-    unityUrl: "https://github.com/atirek-pothiwala/Boss-Rush",
-    webUrl: "https://atirek-pothiwala.github.io/Boss-Rush/",
-  },
-  {
     src: imgRecipes,
     alt: "Recipes",
     appleUrl: "https://github.com/atirek-pothiwala/ios-recipes-app",
@@ -62,16 +53,6 @@ export const projects = [
     src: imgJournal,
     alt: "Journal",
     appleUrl: "https://github.com/atirek-pothiwala/ios-journal-app",
-  },
-  {
-    src: imgRSP,
-    alt: "Rock-Paper-Scissors",
-    appleUrl: "https://github.com/atirek-pothiwala/rock-paper-scissors",
-  },
-  {
-    src: imgTTT,
-    alt: "Tic-Tac-Toe",
-    appleUrl: "https://github.com/atirek-pothiwala/tictactoe",
   },
   {
     src: imgSwirl,

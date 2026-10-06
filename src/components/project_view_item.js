@@ -38,7 +38,7 @@ const ProjectViewItem = ({
   return (
     <section className="project-view-item">
       <img src={src} alt={alt} />
-      <div>
+      <div className="project-view-platforms">
         {PLATFORM_LINKS.map(({ key, src: platformSrc, alt: platformAlt }) => {
           const url = links[key];
           if (!url) {

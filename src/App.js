@@ -6,6 +6,7 @@ import ExperienceView from "./components/experience_view";
 import FooterView from "./components/footer_view";
 import ContactView from "./components/contact_view";
 import ProjectView from "./components/project_view";
+import GameView from "./components/game_view";
 import TechView from "./components/tech_view";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <ExperienceView />
       </div>
       <ProjectView />
+      <GameView />
       <TechView />
       <ContactView />
       <FooterView />

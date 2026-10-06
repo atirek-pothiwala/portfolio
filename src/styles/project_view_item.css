@@ -14,7 +14,7 @@
   object-fit: cover;
 }
 
-.project-view-item div {
+.project-view-platforms {
   position: absolute;
   bottom: -7.5%;
   right: 7.5%;
@@ -26,14 +26,15 @@
   gap: 7.5%;
 }
 
-.project-view-item div img {
+.project-view-platforms img {
   box-shadow: 1px 1px 2.5px 0.5px var(--secondary-color);
   width: 2.25rem;
   height: 2.25rem;
   object-fit: cover;
+  cursor: pointer;
 }
 
-.project-view-item div img:hover {
+.project-view-platforms img:hover {
   box-shadow: 1px 1px 10px 2.5px var(--primary-color);
   background: white;
 }
