@@ -38,7 +38,7 @@ const GameSlide = ({ game }) => {
   return (
     <div className="game-carousel-slide">
       <div className="game-carousel-frame" ref={frameRef}>
-        {active && (
+        {active && game.embedUrl && (
           <iframe
             src={game.embedUrl}
             title={game.alt}
@@ -76,6 +76,7 @@ const GameView = () => {
     startX: 0,
     scrollLeft: 0,
   });
+  const canSwipe = games.length > 1;
   const [edges, setEdges] = useState({ atStart: true, atEnd: false, index: 0 });
 
   const updateEdges = () => {
@@ -90,18 +91,34 @@ const GameView = () => {
     const index = Math.round(track.scrollLeft / (slide.offsetWidth + gap));
     const lastIndex = Math.max(0, track.children.length - 1);
 
-    setEdges({
+    const nextEdges = {
       index: Math.min(lastIndex, Math.max(0, index)),
       atStart: track.scrollLeft <= 4,
       atEnd: track.scrollLeft + track.clientWidth >= track.scrollWidth - 4,
+    };
+
+    setEdges((current) => {
+      if (
+        current.index === nextEdges.index &&
+        current.atStart === nextEdges.atStart &&
+        current.atEnd === nextEdges.atEnd
+      ) {
+        return current;
+      }
+
+      return nextEdges;
     });
   };
 
   useEffect(() => {
+    if (!canSwipe) {
+      return undefined;
+    }
+
     updateEdges();
     window.addEventListener("resize", updateEdges);
     return () => window.removeEventListener("resize", updateEdges);
-  }, []);
+  }, [canSwipe]);
 
   const scrollBySlide = (direction) => {
     const track = trackRef.current;
@@ -122,7 +139,7 @@ const GameView = () => {
     const interactive = event.target.closest(
       "iframe, .game-carousel-links, .game-carousel-button",
     );
-    if (event.button !== 0 || interactive) {
+    if (!canSwipe || event.button !== 0 || interactive) {
       return;
     }
 
@@ -183,7 +200,7 @@ const GameView = () => {
       </div>
       <div className="game-carousel">
         <div
-          className="game-carousel-track"
+          className={`game-carousel-track${canSwipe ? " is-swipeable" : ""}`}
           ref={trackRef}
           onScroll={updateEdges}
           onPointerDown={onPointerDown}
@@ -196,7 +213,7 @@ const GameView = () => {
             <GameSlide key={game.alt} game={game} />
           ))}
         </div>
-        {games.length > 1 && (
+        {canSwipe && (
           <div className="game-carousel-controls">
             <button
               type="button"
