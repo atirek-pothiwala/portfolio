@@ -10,15 +10,22 @@ const GameView = () => {
     startX: 0,
     scrollLeft: 0,
   });
-  const [edges, setEdges] = useState({ atStart: true, atEnd: false });
+  const [edges, setEdges] = useState({ atStart: true, atEnd: false, index: 0 });
 
   const updateEdges = () => {
     const track = trackRef.current;
-    if (!track) {
+    const slide = track?.querySelector(".game-carousel-slide");
+    if (!track || !slide) {
       return;
     }
 
+    const styles = window.getComputedStyle(track);
+    const gap = Number.parseFloat(styles.columnGap || styles.gap) || 0;
+    const index = Math.round(track.scrollLeft / (slide.offsetWidth + gap));
+    const lastIndex = Math.max(0, track.children.length - 1);
+
     setEdges({
+      index: Math.min(lastIndex, Math.max(0, index)),
       atStart: track.scrollLeft <= 4,
       atEnd: track.scrollLeft + track.clientWidth >= track.scrollWidth - 4,
     });
@@ -109,15 +116,6 @@ const GameView = () => {
         <span className="game-view-title-highlight">Games</span>
       </div>
       <div className="game-carousel">
-        <button
-          type="button"
-          className="game-carousel-button game-carousel-button-prev"
-          aria-label="Previous game"
-          disabled={edges.atStart}
-          onClick={() => scrollBySlide(-1)}
-        >
-          ‹
-        </button>
         <div
           className="game-carousel-track"
           ref={trackRef}
@@ -134,15 +132,38 @@ const GameView = () => {
             </div>
           ))}
         </div>
-        <button
-          type="button"
-          className="game-carousel-button game-carousel-button-next"
-          aria-label="Next game"
-          disabled={edges.atEnd}
-          onClick={() => scrollBySlide(1)}
-        >
-          ›
-        </button>
+        <div className="game-carousel-controls">
+          <button
+            type="button"
+            className="game-carousel-button"
+            aria-label="Previous game"
+            disabled={edges.atStart}
+            onClick={() => scrollBySlide(-1)}
+          >
+            ‹
+          </button>
+          <div className="game-carousel-dots">
+            {games.map((game, index) => (
+              <button
+                key={game.alt}
+                type="button"
+                className="game-carousel-dot"
+                aria-label={`Show ${game.alt}`}
+                aria-current={index === edges.index}
+                onClick={() => scrollBySlide(index - edges.index)}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            className="game-carousel-button"
+            aria-label="Next game"
+            disabled={edges.atEnd}
+            onClick={() => scrollBySlide(1)}
+          >
+            ›
+          </button>
+        </div>
       </div>
     </section>
   );

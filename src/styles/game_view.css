@@ -46,15 +46,18 @@
 }
 
 .game-carousel-slide {
-  flex: 0 0 86%;
-  scroll-snap-align: center;
+  flex: 0 0 min(18rem, 78%);
+  scroll-snap-align: start;
+}
+
+.game-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
 }
 
 .game-carousel-button {
-  position: absolute;
-  top: 50%;
-  z-index: 2;
-  transform: translateY(-50%);
   width: 2.5rem;
   height: 2.5rem;
   border: 1px solid var(--primary-color);
@@ -76,12 +79,24 @@
   cursor: default;
 }
 
-.game-carousel-button-prev {
-  left: 0.25rem;
+.game-carousel-dots {
+  display: flex;
+  gap: 0.45rem;
 }
 
-.game-carousel-button-next {
-  right: 0.25rem;
+.game-carousel-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+}
+
+.game-carousel-dot[aria-current="true"] {
+  background: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
 }
 
 @media (max-width: 1024px) {
@@ -97,6 +112,6 @@
   }
 
   .game-carousel-slide {
-    flex-basis: 88%;
+    flex-basis: min(18rem, 82%);
   }
 }
