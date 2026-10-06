@@ -50,7 +50,7 @@
 }
 
 .game-carousel-slide {
-  flex: 0 0 100%;
+  flex: 0 0 min(100%, 24rem);
   scroll-snap-align: start;
 }
 
